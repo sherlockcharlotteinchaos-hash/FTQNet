@@ -1,0 +1,254 @@
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Influenza-US', data_path='Influenza US.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=53, features='M', flinear_alpha=0.5, flinear_c=0.0001, flinear_groups=2, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='Influenza-US_24_4_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=4, random_seed=42, root_path='./dataset/', seq_len=24, target='ILITOTAL', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.5, c: 0.0001, groups: 2
+Use GPU: cuda:0
+Influenza-US | train | shape=(521, 53) | windows=478 | training_prefix=505 | fixed_test_origin=517 (2020-08-30) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+>>>>>>>start training : Influenza-US_24_4_fixed_FTQNet_Influenza-US_ftM_sl24_pl4_cycle52_fa0.5_fc0.0001_fg2_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Influenza-US | val | shape=(521, 53) | windows=9 | training_prefix=505 | fixed_test_origin=517 (2020-08-30) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+history/selection epoch=1/40 train_MASE=2.379906 validation_MASE=2.392536 best=2.392536
+history/selection epoch=2/40 train_MASE=2.326858 validation_MASE=2.434709 best=2.392536
+history/selection epoch=3/40 train_MASE=2.254139 validation_MASE=2.504623 best=2.392536
+history/selection epoch=4/40 train_MASE=2.173668 validation_MASE=2.641645 best=2.392536
+history/selection epoch=5/40 train_MASE=2.111281 validation_MASE=2.770327 best=2.392536
+history/selection epoch=6/40 train_MASE=2.065861 validation_MASE=2.771930 best=2.392536
+history/selection epoch=7/40 train_MASE=2.013196 validation_MASE=2.687864 best=2.392536
+history/selection epoch=8/40 train_MASE=1.959688 validation_MASE=2.606697 best=2.392536
+history/selection epoch=9/40 train_MASE=1.912467 validation_MASE=2.599224 best=2.392536
+history/selection epoch=10/40 train_MASE=1.884033 validation_MASE=2.589420 best=2.392536
+history/selection epoch=11/40 train_MASE=1.865188 validation_MASE=2.551815 best=2.392536
+recent/selection epoch=1/10 train_MASE=3.113956 validation_MASE=2.402168 best=2.402168
+recent/selection epoch=2/10 train_MASE=3.101340 validation_MASE=2.411103 best=2.402168
+recent/selection epoch=3/10 train_MASE=3.091243 validation_MASE=2.420885 best=2.402168
+recent/selection epoch=4/10 train_MASE=3.080317 validation_MASE=2.433754 best=2.402168
+recent/selection epoch=5/10 train_MASE=3.070169 validation_MASE=2.448746 best=2.402168
+recent/selection epoch=6/10 train_MASE=3.060361 validation_MASE=2.464226 best=2.402168
+recent/selection epoch=7/10 train_MASE=3.050997 validation_MASE=2.475782 best=2.402168
+recent/selection epoch=8/10 train_MASE=3.042034 validation_MASE=2.483238 best=2.402168
+recent/selection epoch=9/10 train_MASE=3.034739 validation_MASE=2.491876 best=2.402168
+recent/selection epoch=10/10 train_MASE=3.024855 validation_MASE=2.502825 best=2.402168
+Influenza-US | train/refit | shape=(521, 53) | windows=490 | training_prefix=517 | fixed_test_origin=517 (2020-08-30) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+history/refit epoch=1/1 train_MASE=2.349425
+Frozen selection={'history_epochs': 1, 'recent_epochs': 0, 'validation_mase': 2.392536358875136} | mode=state_relative_mean | train_end=517 | seconds=3.7
+>>>>>>>testing : Influenza-US_24_4_fixed_FTQNet_Influenza-US_ftM_sl24_pl4_cycle52_fa0.5_fc0.0001_fg2_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Influenza-US | test/refit | shape=(521, 53) | windows=1 | training_prefix=517 | fixed_test_origin=517 (2020-08-30) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+PROTOCOL=epicast-state-single-tail-origin-v2 | origin=2020-08-30 | windows=1 | H=4 | reported_targets=212/212 | selection={'history_epochs': 1, 'recent_epochs': 0, 'validation_mase': 2.392536358875136}
+EpiCast raw metrics | MAE:39.9018492999, RMSE:45.2798734583, SMAPE:30.0828584828, MASE:0.8894958022
+mse:0.08567239750111494, mae:0.1494250401936818
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Influenza-US', data_path='Influenza US.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=53, features='M', flinear_alpha=0.9, flinear_c=0.01, flinear_groups=4, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=1e-05, loss='mae', lradj='constant', model='FTQNet', model_id='Influenza-US_24_8_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=8, random_seed=42, root_path='./dataset/', seq_len=24, target='ILITOTAL', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 0.01, groups: 4
+Use GPU: cuda:0
+Influenza-US | train | shape=(521, 53) | windows=470 | training_prefix=501 | fixed_test_origin=513 (2020-08-02) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+>>>>>>>start training : Influenza-US_24_8_fixed_FTQNet_Influenza-US_ftM_sl24_pl8_cycle52_fa0.9_fc0.01_fg4_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Influenza-US | val | shape=(521, 53) | windows=5 | training_prefix=501 | fixed_test_origin=513 (2020-08-02) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+history/selection epoch=1/40 train_MASE=2.974220 validation_MASE=2.811983 best=2.811983
+history/selection epoch=2/40 train_MASE=2.973808 validation_MASE=2.811842 best=2.811842
+history/selection epoch=3/40 train_MASE=2.973695 validation_MASE=2.811707 best=2.811707
+history/selection epoch=4/40 train_MASE=2.972993 validation_MASE=2.811573 best=2.811573
+history/selection epoch=5/40 train_MASE=2.973078 validation_MASE=2.811433 best=2.811433
+history/selection epoch=6/40 train_MASE=2.972446 validation_MASE=2.811294 best=2.811294
+history/selection epoch=7/40 train_MASE=2.972171 validation_MASE=2.811148 best=2.811148
+history/selection epoch=8/40 train_MASE=2.971615 validation_MASE=2.811001 best=2.811001
+history/selection epoch=9/40 train_MASE=2.971019 validation_MASE=2.810854 best=2.810854
+history/selection epoch=10/40 train_MASE=2.970732 validation_MASE=2.810700 best=2.810700
+history/selection epoch=11/40 train_MASE=2.970950 validation_MASE=2.810546 best=2.810546
+history/selection epoch=12/40 train_MASE=2.970314 validation_MASE=2.810399 best=2.810399
+history/selection epoch=13/40 train_MASE=2.969658 validation_MASE=2.810235 best=2.810235
+history/selection epoch=14/40 train_MASE=2.969355 validation_MASE=2.810079 best=2.810079
+history/selection epoch=15/40 train_MASE=2.968612 validation_MASE=2.809928 best=2.809928
+history/selection epoch=16/40 train_MASE=2.968195 validation_MASE=2.809767 best=2.809767
+history/selection epoch=17/40 train_MASE=2.968175 validation_MASE=2.809630 best=2.809630
+history/selection epoch=18/40 train_MASE=2.967471 validation_MASE=2.809504 best=2.809504
+history/selection epoch=19/40 train_MASE=2.967089 validation_MASE=2.809369 best=2.809369
+history/selection epoch=20/40 train_MASE=2.966506 validation_MASE=2.809254 best=2.809254
+history/selection epoch=21/40 train_MASE=2.966144 validation_MASE=2.809137 best=2.809137
+history/selection epoch=22/40 train_MASE=2.965901 validation_MASE=2.808998 best=2.808998
+history/selection epoch=23/40 train_MASE=2.965359 validation_MASE=2.808874 best=2.808874
+history/selection epoch=24/40 train_MASE=2.964850 validation_MASE=2.808739 best=2.808739
+history/selection epoch=25/40 train_MASE=2.964748 validation_MASE=2.808619 best=2.808619
+history/selection epoch=26/40 train_MASE=2.963808 validation_MASE=2.808471 best=2.808471
+history/selection epoch=27/40 train_MASE=2.963627 validation_MASE=2.808343 best=2.808343
+history/selection epoch=28/40 train_MASE=2.963051 validation_MASE=2.808207 best=2.808207
+history/selection epoch=29/40 train_MASE=2.962802 validation_MASE=2.808063 best=2.808063
+history/selection epoch=30/40 train_MASE=2.962259 validation_MASE=2.807928 best=2.807928
+history/selection epoch=31/40 train_MASE=2.961255 validation_MASE=2.807788 best=2.807788
+history/selection epoch=32/40 train_MASE=2.960964 validation_MASE=2.807647 best=2.807647
+history/selection epoch=33/40 train_MASE=2.961029 validation_MASE=2.807482 best=2.807482
+history/selection epoch=34/40 train_MASE=2.960068 validation_MASE=2.807341 best=2.807341
+history/selection epoch=35/40 train_MASE=2.959545 validation_MASE=2.807179 best=2.807179
+history/selection epoch=36/40 train_MASE=2.959304 validation_MASE=2.807016 best=2.807016
+history/selection epoch=37/40 train_MASE=2.958504 validation_MASE=2.806851 best=2.806851
+history/selection epoch=38/40 train_MASE=2.958239 validation_MASE=2.806686 best=2.806686
+history/selection epoch=39/40 train_MASE=2.957733 validation_MASE=2.806522 best=2.806522
+history/selection epoch=40/40 train_MASE=2.957146 validation_MASE=2.806330 best=2.806330
+recent/selection epoch=1/10 train_MASE=4.146361 validation_MASE=2.806328 best=2.806328
+recent/selection epoch=2/10 train_MASE=4.146385 validation_MASE=2.806326 best=2.806326
+recent/selection epoch=3/10 train_MASE=4.146388 validation_MASE=2.806325 best=2.806325
+recent/selection epoch=4/10 train_MASE=4.146308 validation_MASE=2.806323 best=2.806323
+recent/selection epoch=5/10 train_MASE=4.146202 validation_MASE=2.806320 best=2.806320
+recent/selection epoch=6/10 train_MASE=4.146324 validation_MASE=2.806318 best=2.806318
+recent/selection epoch=7/10 train_MASE=4.146198 validation_MASE=2.806316 best=2.806316
+recent/selection epoch=8/10 train_MASE=4.146103 validation_MASE=2.806314 best=2.806314
+recent/selection epoch=9/10 train_MASE=4.146032 validation_MASE=2.806311 best=2.806311
+recent/selection epoch=10/10 train_MASE=4.146044 validation_MASE=2.806309 best=2.806309
+Influenza-US | train/refit | shape=(521, 53) | windows=482 | training_prefix=513 | fixed_test_origin=513 (2020-08-02) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+history/refit epoch=1/40 train_MASE=2.948976
+history/refit epoch=2/40 train_MASE=2.948820
+history/refit epoch=3/40 train_MASE=2.948337
+history/refit epoch=4/40 train_MASE=2.947955
+history/refit epoch=5/40 train_MASE=2.947263
+history/refit epoch=6/40 train_MASE=2.946879
+history/refit epoch=7/40 train_MASE=2.947089
+history/refit epoch=8/40 train_MASE=2.946319
+history/refit epoch=9/40 train_MASE=2.946130
+history/refit epoch=10/40 train_MASE=2.945701
+history/refit epoch=11/40 train_MASE=2.944934
+history/refit epoch=12/40 train_MASE=2.944976
+history/refit epoch=13/40 train_MASE=2.944628
+history/refit epoch=14/40 train_MASE=2.943976
+history/refit epoch=15/40 train_MASE=2.943539
+history/refit epoch=16/40 train_MASE=2.943179
+history/refit epoch=17/40 train_MASE=2.942776
+history/refit epoch=18/40 train_MASE=2.942146
+history/refit epoch=19/40 train_MASE=2.941511
+history/refit epoch=20/40 train_MASE=2.941298
+history/refit epoch=21/40 train_MASE=2.940786
+history/refit epoch=22/40 train_MASE=2.940573
+history/refit epoch=23/40 train_MASE=2.940125
+history/refit epoch=24/40 train_MASE=2.939422
+history/refit epoch=25/40 train_MASE=2.939014
+history/refit epoch=26/40 train_MASE=2.938729
+history/refit epoch=27/40 train_MASE=2.938166
+history/refit epoch=28/40 train_MASE=2.937911
+history/refit epoch=29/40 train_MASE=2.937457
+history/refit epoch=30/40 train_MASE=2.936869
+history/refit epoch=31/40 train_MASE=2.936233
+history/refit epoch=32/40 train_MASE=2.935762
+history/refit epoch=33/40 train_MASE=2.935126
+history/refit epoch=34/40 train_MASE=2.934799
+history/refit epoch=35/40 train_MASE=2.934279
+history/refit epoch=36/40 train_MASE=2.934048
+history/refit epoch=37/40 train_MASE=2.933366
+history/refit epoch=38/40 train_MASE=2.932877
+history/refit epoch=39/40 train_MASE=2.932323
+history/refit epoch=40/40 train_MASE=2.931699
+recent/refit epoch=1/10 train_MASE=3.413169
+recent/refit epoch=2/10 train_MASE=3.413417
+recent/refit epoch=3/10 train_MASE=3.412918
+recent/refit epoch=4/10 train_MASE=3.413140
+recent/refit epoch=5/10 train_MASE=3.413120
+recent/refit epoch=6/10 train_MASE=3.413154
+recent/refit epoch=7/10 train_MASE=3.412930
+recent/refit epoch=8/10 train_MASE=3.412844
+recent/refit epoch=9/10 train_MASE=3.412772
+recent/refit epoch=10/10 train_MASE=3.412638
+Frozen selection={'history_epochs': 40, 'recent_epochs': 10, 'validation_mase': 2.8063089018917595} | mode=state_log_last | train_end=513 | seconds=14.6
+>>>>>>>testing : Influenza-US_24_8_fixed_FTQNet_Influenza-US_ftM_sl24_pl8_cycle52_fa0.9_fc0.01_fg4_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Influenza-US | test/refit | shape=(521, 53) | windows=1 | training_prefix=513 | fixed_test_origin=513 (2020-08-02) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+PROTOCOL=epicast-state-single-tail-origin-v2 | origin=2020-08-02 | windows=1 | H=8 | reported_targets=424/424 | selection={'history_epochs': 40, 'recent_epochs': 10, 'validation_mase': 2.8063089018917595}
+EpiCast raw metrics | MAE:54.4432897319, RMSE:63.5505700339, SMAPE:30.8420964820, MASE:1.1712603484
+mse:0.4404475294624861, mae:0.18912558937085228
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Influenza-US', data_path='Influenza US.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=53, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=4, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='Influenza-US_24_12_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=12, random_seed=42, root_path='./dataset/', seq_len=24, target='ILITOTAL', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 4
+Use GPU: cuda:0
+Influenza-US | train | shape=(521, 53) | windows=462 | training_prefix=497 | fixed_test_origin=509 (2020-07-05) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+>>>>>>>start training : Influenza-US_24_12_fixed_FTQNet_Influenza-US_ftM_sl24_pl12_cycle52_fa0.9_fc1.0_fg4_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Influenza-US | val | shape=(521, 53) | windows=1 | training_prefix=497 | fixed_test_origin=509 (2020-07-05) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+history/selection epoch=1/40 train_MASE=3.965891 validation_MASE=3.683544 best=3.683544
+history/selection epoch=2/40 train_MASE=3.894904 validation_MASE=3.673136 best=3.673136
+history/selection epoch=3/40 train_MASE=3.826151 validation_MASE=3.659642 best=3.659642
+history/selection epoch=4/40 train_MASE=3.749766 validation_MASE=3.644909 best=3.644909
+history/selection epoch=5/40 train_MASE=3.692724 validation_MASE=3.631633 best=3.631633
+history/selection epoch=6/40 train_MASE=3.652903 validation_MASE=3.620166 best=3.620166
+history/selection epoch=7/40 train_MASE=3.623413 validation_MASE=3.614068 best=3.614068
+history/selection epoch=8/40 train_MASE=3.593341 validation_MASE=3.614497 best=3.614068
+history/selection epoch=9/40 train_MASE=3.564542 validation_MASE=3.613002 best=3.613002
+history/selection epoch=10/40 train_MASE=3.532048 validation_MASE=3.606983 best=3.606983
+history/selection epoch=11/40 train_MASE=3.503121 validation_MASE=3.600979 best=3.600979
+history/selection epoch=12/40 train_MASE=3.475957 validation_MASE=3.594861 best=3.594861
+history/selection epoch=13/40 train_MASE=3.444318 validation_MASE=3.589097 best=3.589097
+history/selection epoch=14/40 train_MASE=3.417359 validation_MASE=3.583104 best=3.583104
+history/selection epoch=15/40 train_MASE=3.388666 validation_MASE=3.579481 best=3.579481
+history/selection epoch=16/40 train_MASE=3.368020 validation_MASE=3.577933 best=3.577933
+history/selection epoch=17/40 train_MASE=3.349841 validation_MASE=3.577499 best=3.577499
+history/selection epoch=18/40 train_MASE=3.326949 validation_MASE=3.579461 best=3.577499
+history/selection epoch=19/40 train_MASE=3.321113 validation_MASE=3.581569 best=3.577499
+history/selection epoch=20/40 train_MASE=3.303747 validation_MASE=3.581123 best=3.577499
+history/selection epoch=21/40 train_MASE=3.291237 validation_MASE=3.579394 best=3.577499
+history/selection epoch=22/40 train_MASE=3.281647 validation_MASE=3.576725 best=3.576725
+history/selection epoch=23/40 train_MASE=3.265154 validation_MASE=3.576338 best=3.576338
+history/selection epoch=24/40 train_MASE=3.261962 validation_MASE=3.575576 best=3.575576
+history/selection epoch=25/40 train_MASE=3.246768 validation_MASE=3.575250 best=3.575250
+history/selection epoch=26/40 train_MASE=3.237182 validation_MASE=3.572368 best=3.572368
+history/selection epoch=27/40 train_MASE=3.223674 validation_MASE=3.571788 best=3.571788
+history/selection epoch=28/40 train_MASE=3.221262 validation_MASE=3.570676 best=3.570676
+history/selection epoch=29/40 train_MASE=3.214700 validation_MASE=3.568743 best=3.568743
+history/selection epoch=30/40 train_MASE=3.202181 validation_MASE=3.566985 best=3.566985
+history/selection epoch=31/40 train_MASE=3.190015 validation_MASE=3.566521 best=3.566521
+history/selection epoch=32/40 train_MASE=3.188593 validation_MASE=3.565241 best=3.565241
+history/selection epoch=33/40 train_MASE=3.175391 validation_MASE=3.566622 best=3.565241
+history/selection epoch=34/40 train_MASE=3.173810 validation_MASE=3.566793 best=3.565241
+history/selection epoch=35/40 train_MASE=3.166050 validation_MASE=3.561966 best=3.561966
+history/selection epoch=36/40 train_MASE=3.163355 validation_MASE=3.559612 best=3.559612
+history/selection epoch=37/40 train_MASE=3.153424 validation_MASE=3.557911 best=3.557911
+history/selection epoch=38/40 train_MASE=3.147750 validation_MASE=3.555222 best=3.555222
+history/selection epoch=39/40 train_MASE=3.128749 validation_MASE=3.553831 best=3.553831
+history/selection epoch=40/40 train_MASE=3.131684 validation_MASE=3.550881 best=3.550881
+recent/selection epoch=1/10 train_MASE=4.455826 validation_MASE=3.551445 best=3.551445
+recent/selection epoch=2/10 train_MASE=4.407707 validation_MASE=3.551995 best=3.551445
+recent/selection epoch=3/10 train_MASE=4.406270 validation_MASE=3.552523 best=3.551445
+recent/selection epoch=4/10 train_MASE=4.424798 validation_MASE=3.552955 best=3.551445
+recent/selection epoch=5/10 train_MASE=4.394619 validation_MASE=3.553214 best=3.551445
+recent/selection epoch=6/10 train_MASE=4.385672 validation_MASE=3.553218 best=3.551445
+recent/selection epoch=7/10 train_MASE=4.383753 validation_MASE=3.553048 best=3.551445
+recent/selection epoch=8/10 train_MASE=4.399125 validation_MASE=3.552802 best=3.551445
+recent/selection epoch=9/10 train_MASE=4.359287 validation_MASE=3.552512 best=3.551445
+recent/selection epoch=10/10 train_MASE=4.397009 validation_MASE=3.552186 best=3.551445
+Influenza-US | train/refit | shape=(521, 53) | windows=474 | training_prefix=509 | fixed_test_origin=509 (2020-07-05) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+history/refit epoch=1/40 train_MASE=3.984511
+history/refit epoch=2/40 train_MASE=3.912891
+history/refit epoch=3/40 train_MASE=3.828037
+history/refit epoch=4/40 train_MASE=3.754673
+history/refit epoch=5/40 train_MASE=3.696968
+history/refit epoch=6/40 train_MASE=3.653614
+history/refit epoch=7/40 train_MASE=3.620424
+history/refit epoch=8/40 train_MASE=3.583451
+history/refit epoch=9/40 train_MASE=3.550994
+history/refit epoch=10/40 train_MASE=3.519969
+history/refit epoch=11/40 train_MASE=3.486361
+history/refit epoch=12/40 train_MASE=3.452924
+history/refit epoch=13/40 train_MASE=3.420204
+history/refit epoch=14/40 train_MASE=3.396199
+history/refit epoch=15/40 train_MASE=3.369239
+history/refit epoch=16/40 train_MASE=3.348985
+history/refit epoch=17/40 train_MASE=3.325717
+history/refit epoch=18/40 train_MASE=3.317663
+history/refit epoch=19/40 train_MASE=3.296639
+history/refit epoch=20/40 train_MASE=3.284959
+history/refit epoch=21/40 train_MASE=3.270780
+history/refit epoch=22/40 train_MASE=3.263429
+history/refit epoch=23/40 train_MASE=3.247131
+history/refit epoch=24/40 train_MASE=3.230540
+history/refit epoch=25/40 train_MASE=3.218779
+history/refit epoch=26/40 train_MASE=3.203490
+history/refit epoch=27/40 train_MASE=3.198974
+history/refit epoch=28/40 train_MASE=3.193550
+history/refit epoch=29/40 train_MASE=3.189688
+history/refit epoch=30/40 train_MASE=3.181954
+history/refit epoch=31/40 train_MASE=3.169277
+history/refit epoch=32/40 train_MASE=3.173664
+history/refit epoch=33/40 train_MASE=3.146682
+history/refit epoch=34/40 train_MASE=3.154241
+history/refit epoch=35/40 train_MASE=3.133860
+history/refit epoch=36/40 train_MASE=3.134689
+history/refit epoch=37/40 train_MASE=3.125303
+history/refit epoch=38/40 train_MASE=3.124401
+history/refit epoch=39/40 train_MASE=3.103738
+history/refit epoch=40/40 train_MASE=3.103048
+Frozen selection={'history_epochs': 40, 'recent_epochs': 0, 'validation_mase': 3.5508806463338787} | mode=state_log_trend | train_end=509 | seconds=14.9
+>>>>>>>testing : Influenza-US_24_12_fixed_FTQNet_Influenza-US_ftM_sl24_pl12_cycle52_fa0.9_fc1.0_fg4_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Influenza-US | test/refit | shape=(521, 53) | windows=1 | training_prefix=509 | fixed_test_origin=509 (2020-07-05) | CDC state ILITOTAL; inferred 53-jurisdiction reconstruction; causal input-only LOCF; unreported training targets masked
+PROTOCOL=epicast-state-single-tail-origin-v2 | origin=2020-07-05 | windows=1 | H=12 | reported_targets=636/636 | selection={'history_epochs': 40, 'recent_epochs': 0, 'validation_mase': 3.5508806463338787}
+EpiCast raw metrics | MAE:81.7361358696, RMSE:92.0025755334, SMAPE:57.6733015644, MASE:1.9020286217
+mse:0.608927097834489, mae:0.3159604832869434

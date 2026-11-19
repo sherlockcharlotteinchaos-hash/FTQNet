@@ -1,0 +1,234 @@
+Args in experiment:
+Namespace(batch_size=16, checkpoints='./checkpoints/', covid_calibrated=False, cycle=13, d_model=128, data='Dengue-Colombia', data_path='Dengue Colombia.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=33, features='M', flinear_alpha=0.9, flinear_c=0.6, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.002, loss='mae', lradj='constant', model='FTQNet', model_id='Dengue-Colombia_24_4_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=4, random_seed=42, root_path='./dataset/', seq_len=24, target='dengue_total', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 0.6, groups: 8
+Use GPU: cuda:0
+Dengue-Colombia | train | shape=(835, 33) | windows=792 | training_prefix=819 | fixed_test_origin=831 (2022-12-04) | training_output_H=4 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+>>>>>>>start training : Dengue-Colombia_24_4_fixed_FTQNet_Dengue-Colombia_ftM_sl24_pl4_cycle13_fa0.9_fc0.6_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Dengue-Colombia | val | shape=(835, 33) | windows=9 | training_prefix=819 | fixed_test_origin=831 (2022-12-04) | training_output_H=4 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/selection epoch=1/40 train_MASE=1.272205 validation_MASE=1.371481 best=1.371481
+history/selection epoch=2/40 train_MASE=1.244733 validation_MASE=1.388377 best=1.371481
+history/selection epoch=3/40 train_MASE=1.238140 validation_MASE=1.345731 best=1.345731
+history/selection epoch=4/40 train_MASE=1.226998 validation_MASE=1.362059 best=1.345731
+history/selection epoch=5/40 train_MASE=1.220406 validation_MASE=1.308942 best=1.308942
+history/selection epoch=6/40 train_MASE=1.209544 validation_MASE=1.319229 best=1.308942
+history/selection epoch=7/40 train_MASE=1.205036 validation_MASE=1.350964 best=1.308942
+history/selection epoch=8/40 train_MASE=1.201878 validation_MASE=1.338151 best=1.308942
+history/selection epoch=9/40 train_MASE=1.191577 validation_MASE=1.297334 best=1.297334
+history/selection epoch=10/40 train_MASE=1.186289 validation_MASE=1.323927 best=1.297334
+history/selection epoch=11/40 train_MASE=1.181755 validation_MASE=1.274149 best=1.274149
+history/selection epoch=12/40 train_MASE=1.183095 validation_MASE=1.292095 best=1.274149
+history/selection epoch=13/40 train_MASE=1.175093 validation_MASE=1.299096 best=1.274149
+history/selection epoch=14/40 train_MASE=1.170478 validation_MASE=1.333567 best=1.274149
+history/selection epoch=15/40 train_MASE=1.174037 validation_MASE=1.353552 best=1.274149
+history/selection epoch=16/40 train_MASE=1.167872 validation_MASE=1.298968 best=1.274149
+history/selection epoch=17/40 train_MASE=1.170476 validation_MASE=1.292408 best=1.274149
+history/selection epoch=18/40 train_MASE=1.164671 validation_MASE=1.280645 best=1.274149
+history/selection epoch=19/40 train_MASE=1.158224 validation_MASE=1.286931 best=1.274149
+history/selection epoch=20/40 train_MASE=1.163226 validation_MASE=1.273369 best=1.273369
+history/selection epoch=21/40 train_MASE=1.158098 validation_MASE=1.304144 best=1.273369
+history/selection epoch=22/40 train_MASE=1.153749 validation_MASE=1.341401 best=1.273369
+history/selection epoch=23/40 train_MASE=1.152330 validation_MASE=1.316721 best=1.273369
+history/selection epoch=24/40 train_MASE=1.153317 validation_MASE=1.299130 best=1.273369
+history/selection epoch=25/40 train_MASE=1.150771 validation_MASE=1.307047 best=1.273369
+history/selection epoch=26/40 train_MASE=1.148993 validation_MASE=1.310708 best=1.273369
+history/selection epoch=27/40 train_MASE=1.148525 validation_MASE=1.307413 best=1.273369
+history/selection epoch=28/40 train_MASE=1.142005 validation_MASE=1.324851 best=1.273369
+history/selection epoch=29/40 train_MASE=1.138976 validation_MASE=1.305187 best=1.273369
+history/selection epoch=30/40 train_MASE=1.135922 validation_MASE=1.292175 best=1.273369
+recent/selection epoch=1/10 train_MASE=0.998737 validation_MASE=1.298464 best=1.298464
+recent/selection epoch=2/10 train_MASE=0.983397 validation_MASE=1.310935 best=1.298464
+recent/selection epoch=3/10 train_MASE=0.976051 validation_MASE=1.311199 best=1.298464
+recent/selection epoch=4/10 train_MASE=0.974625 validation_MASE=1.306897 best=1.298464
+recent/selection epoch=5/10 train_MASE=0.967780 validation_MASE=1.296629 best=1.296629
+recent/selection epoch=6/10 train_MASE=0.962385 validation_MASE=1.302312 best=1.296629
+recent/selection epoch=7/10 train_MASE=0.951603 validation_MASE=1.306699 best=1.296629
+recent/selection epoch=8/10 train_MASE=0.955493 validation_MASE=1.314399 best=1.296629
+recent/selection epoch=9/10 train_MASE=0.951785 validation_MASE=1.302664 best=1.296629
+recent/selection epoch=10/10 train_MASE=0.949306 validation_MASE=1.298337 best=1.296629
+Dengue-Colombia | train/refit | shape=(835, 33) | windows=804 | training_prefix=831 | fixed_test_origin=831 (2022-12-04) | training_output_H=4 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/refit epoch=1/20 train_MASE=1.268523
+history/refit epoch=2/20 train_MASE=1.247693
+history/refit epoch=3/20 train_MASE=1.235731
+history/refit epoch=4/20 train_MASE=1.229050
+history/refit epoch=5/20 train_MASE=1.221878
+history/refit epoch=6/20 train_MASE=1.213974
+history/refit epoch=7/20 train_MASE=1.208270
+history/refit epoch=8/20 train_MASE=1.207430
+history/refit epoch=9/20 train_MASE=1.197028
+history/refit epoch=10/20 train_MASE=1.200172
+history/refit epoch=11/20 train_MASE=1.190823
+history/refit epoch=12/20 train_MASE=1.184831
+history/refit epoch=13/20 train_MASE=1.184387
+history/refit epoch=14/20 train_MASE=1.179824
+history/refit epoch=15/20 train_MASE=1.173439
+history/refit epoch=16/20 train_MASE=1.171842
+history/refit epoch=17/20 train_MASE=1.170314
+history/refit epoch=18/20 train_MASE=1.163061
+history/refit epoch=19/20 train_MASE=1.168856
+history/refit epoch=20/20 train_MASE=1.161782
+Frozen selection={'history_epochs': 20, 'recent_epochs': 0, 'validation_mase': 1.27336853358652} | mode=global_last | train_end=831 | seconds=80.6
+>>>>>>>testing : Dengue-Colombia_24_4_fixed_FTQNet_Dengue-Colombia_ftM_sl24_pl4_cycle13_fa0.9_fc0.6_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Dengue-Colombia | test/refit | shape=(835, 33) | windows=1 | training_prefix=831 | fixed_test_origin=831 (2022-12-04) | training_output_H=4 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2022-12-04 | windows=1 | H=4 | reported_targets=120/132 | selection={'history_epochs': 20, 'recent_epochs': 0, 'validation_mase': 1.27336853358652}
+EpiCast raw metrics | MAE:7.3120557833, RMSE:8.5083983632, SMAPE:26.3938500801, MASE:1.1424778004
+mse:0.25697870516083077, mae:0.28449210965094845
+Args in experiment:
+Namespace(batch_size=32, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Dengue-Colombia', data_path='Dengue Colombia.csv', des='fixed', devices='0', dropout=0.0, embed='timeF', enc_in=33, features='M', flinear_alpha=0.99, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='Dengue-Colombia_24_8_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=8, random_seed=42, root_path='./dataset/', seq_len=24, target='dengue_total', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.99, c: 1.0, groups: 8
+Use GPU: cuda:0
+Dengue-Colombia | train | shape=(835, 33) | windows=713 | training_prefix=744 | fixed_test_origin=827 (2022-11-06) | training_output_H=8 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+>>>>>>>start training : Dengue-Colombia_24_8_fixed_FTQNet_Dengue-Colombia_ftM_sl24_pl8_cycle52_fa0.99_fc1.0_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Dengue-Colombia | val | shape=(835, 33) | windows=76 | training_prefix=744 | fixed_test_origin=827 (2022-11-06) | training_output_H=8 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/selection epoch=1/40 train_MASE=1.605227 validation_MASE=1.642063 best=1.642063
+history/selection epoch=2/40 train_MASE=1.568631 validation_MASE=1.634817 best=1.634817
+history/selection epoch=3/40 train_MASE=1.555674 validation_MASE=1.609618 best=1.609618
+history/selection epoch=4/40 train_MASE=1.539418 validation_MASE=1.586276 best=1.586276
+history/selection epoch=5/40 train_MASE=1.519136 validation_MASE=1.550952 best=1.550952
+history/selection epoch=6/40 train_MASE=1.484167 validation_MASE=1.530321 best=1.530321
+history/selection epoch=7/40 train_MASE=1.465861 validation_MASE=1.518769 best=1.518769
+history/selection epoch=8/40 train_MASE=1.459075 validation_MASE=1.506688 best=1.506688
+history/selection epoch=9/40 train_MASE=1.450274 validation_MASE=1.490305 best=1.490305
+history/selection epoch=10/40 train_MASE=1.445869 validation_MASE=1.492608 best=1.490305
+history/selection epoch=11/40 train_MASE=1.436093 validation_MASE=1.484081 best=1.484081
+history/selection epoch=12/40 train_MASE=1.427695 validation_MASE=1.469229 best=1.469229
+history/selection epoch=13/40 train_MASE=1.420628 validation_MASE=1.458885 best=1.458885
+history/selection epoch=14/40 train_MASE=1.413031 validation_MASE=1.465847 best=1.458885
+history/selection epoch=15/40 train_MASE=1.405801 validation_MASE=1.465069 best=1.458885
+history/selection epoch=16/40 train_MASE=1.407136 validation_MASE=1.455515 best=1.455515
+history/selection epoch=17/40 train_MASE=1.396919 validation_MASE=1.458484 best=1.455515
+history/selection epoch=18/40 train_MASE=1.390454 validation_MASE=1.453559 best=1.453559
+history/selection epoch=19/40 train_MASE=1.384214 validation_MASE=1.447138 best=1.447138
+history/selection epoch=20/40 train_MASE=1.380523 validation_MASE=1.477066 best=1.447138
+history/selection epoch=21/40 train_MASE=1.379804 validation_MASE=1.462907 best=1.447138
+history/selection epoch=22/40 train_MASE=1.375585 validation_MASE=1.467555 best=1.447138
+history/selection epoch=23/40 train_MASE=1.370526 validation_MASE=1.446679 best=1.446679
+history/selection epoch=24/40 train_MASE=1.372499 validation_MASE=1.458961 best=1.446679
+history/selection epoch=25/40 train_MASE=1.360636 validation_MASE=1.465678 best=1.446679
+history/selection epoch=26/40 train_MASE=1.361417 validation_MASE=1.477910 best=1.446679
+history/selection epoch=27/40 train_MASE=1.356050 validation_MASE=1.473326 best=1.446679
+history/selection epoch=28/40 train_MASE=1.358273 validation_MASE=1.481459 best=1.446679
+history/selection epoch=29/40 train_MASE=1.353005 validation_MASE=1.464611 best=1.446679
+history/selection epoch=30/40 train_MASE=1.351975 validation_MASE=1.493054 best=1.446679
+history/selection epoch=31/40 train_MASE=1.347981 validation_MASE=1.489725 best=1.446679
+history/selection epoch=32/40 train_MASE=1.349107 validation_MASE=1.488783 best=1.446679
+history/selection epoch=33/40 train_MASE=1.347997 validation_MASE=1.497459 best=1.446679
+recent/selection epoch=1/10 train_MASE=1.725821 validation_MASE=1.464013 best=1.464013
+recent/selection epoch=2/10 train_MASE=1.691773 validation_MASE=1.481223 best=1.464013
+recent/selection epoch=3/10 train_MASE=1.682170 validation_MASE=1.494881 best=1.464013
+recent/selection epoch=4/10 train_MASE=1.669872 validation_MASE=1.504863 best=1.464013
+recent/selection epoch=5/10 train_MASE=1.659850 validation_MASE=1.513717 best=1.464013
+recent/selection epoch=6/10 train_MASE=1.654900 validation_MASE=1.519533 best=1.464013
+recent/selection epoch=7/10 train_MASE=1.651720 validation_MASE=1.524179 best=1.464013
+recent/selection epoch=8/10 train_MASE=1.644130 validation_MASE=1.522996 best=1.464013
+recent/selection epoch=9/10 train_MASE=1.644152 validation_MASE=1.520736 best=1.464013
+recent/selection epoch=10/10 train_MASE=1.627339 validation_MASE=1.521203 best=1.464013
+Historical-only channel calibration | dataset=Dengue-Colombia H=8 validated_channels=11/33 raw_MASE=1.446679 calibrated_MASE=1.402770
+Dengue-Colombia | train/refit | shape=(835, 33) | windows=796 | training_prefix=827 | fixed_test_origin=827 (2022-11-06) | training_output_H=8 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/refit epoch=1/23 train_MASE=1.597965
+history/refit epoch=2/23 train_MASE=1.569395
+history/refit epoch=3/23 train_MASE=1.553124
+history/refit epoch=4/23 train_MASE=1.536482
+history/refit epoch=5/23 train_MASE=1.509533
+history/refit epoch=6/23 train_MASE=1.476406
+history/refit epoch=7/23 train_MASE=1.454926
+history/refit epoch=8/23 train_MASE=1.441655
+history/refit epoch=9/23 train_MASE=1.430274
+history/refit epoch=10/23 train_MASE=1.417228
+history/refit epoch=11/23 train_MASE=1.405758
+history/refit epoch=12/23 train_MASE=1.397568
+history/refit epoch=13/23 train_MASE=1.391457
+history/refit epoch=14/23 train_MASE=1.382363
+history/refit epoch=15/23 train_MASE=1.375005
+history/refit epoch=16/23 train_MASE=1.369169
+history/refit epoch=17/23 train_MASE=1.366642
+history/refit epoch=18/23 train_MASE=1.362180
+history/refit epoch=19/23 train_MASE=1.357512
+history/refit epoch=20/23 train_MASE=1.357393
+history/refit epoch=21/23 train_MASE=1.351913
+history/refit epoch=22/23 train_MASE=1.348652
+history/refit epoch=23/23 train_MASE=1.348234
+Frozen selection={'history_epochs': 23, 'recent_epochs': 0, 'validation_mase': 1.4466792779947166, 'channel_calibration': [['seasonal', 0.25], None, ['seasonal', 0.25], None, None, None, None, None, ['seasonal', 0.25], None, ['seasonal', 0.25], ['seasonal', 0.25], None, None, None, None, None, None, None, None, None, None, ['seasonal', 0.25], ['seasonal', 0.25], ['seasonal', 0.25], None, None, None, None, ['seasonal', 0.25], ['mean4', 0.25], None, ['mean4', 0.5]], 'channel_calibration_val': 1.4027698127289365, 'channel_uncalibrated_val': 1.4466792779947164} | mode=global_last | train_end=827 | seconds=45.0
+>>>>>>>testing : Dengue-Colombia_24_8_fixed_FTQNet_Dengue-Colombia_ftM_sl24_pl8_cycle52_fa0.99_fc1.0_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Dengue-Colombia | test/refit | shape=(835, 33) | windows=1 | training_prefix=827 | fixed_test_origin=827 (2022-11-06) | training_output_H=8 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2022-11-06 | windows=1 | H=8 | reported_targets=239/264 | selection={'history_epochs': 23, 'recent_epochs': 0, 'validation_mase': 1.4466792779947166, 'channel_calibration': [['seasonal', 0.25], None, ['seasonal', 0.25], None, None, None, None, None, ['seasonal', 0.25], None, ['seasonal', 0.25], ['seasonal', 0.25], None, None, None, None, None, None, None, None, None, None, ['seasonal', 0.25], ['seasonal', 0.25], ['seasonal', 0.25], None, None, None, None, ['seasonal', 0.25], ['mean4', 0.25], None, ['mean4', 0.5]], 'channel_calibration_val': 1.4027698127289365, 'channel_uncalibrated_val': 1.4466792779947164}
+EpiCast raw metrics | MAE:10.9213242781, RMSE:12.9705160273, SMAPE:27.9424976679, MASE:1.4548673437
+mse:0.40088218455677355, mae:0.3472972668054571
+Args in experiment:
+Namespace(batch_size=32, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=128, data='Dengue-Colombia', data_path='Dengue Colombia.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=33, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='Dengue-Colombia_24_12_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=12, random_seed=42, root_path='./dataset/', seq_len=24, target='dengue_total', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use GPU: cuda:0
+Dengue-Colombia | train | shape=(835, 33) | windows=705 | training_prefix=740 | fixed_test_origin=823 (2022-10-09) | training_output_H=12 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+>>>>>>>start training : Dengue-Colombia_24_12_fixed_FTQNet_Dengue-Colombia_ftM_sl24_pl12_cycle52_fa0.9_fc1.0_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Dengue-Colombia | val | shape=(835, 33) | windows=72 | training_prefix=740 | fixed_test_origin=823 (2022-10-09) | training_output_H=12 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/selection epoch=1/40 train_MASE=1.876014 validation_MASE=1.907342 best=1.907342
+history/selection epoch=2/40 train_MASE=1.830428 validation_MASE=1.886627 best=1.886627
+history/selection epoch=3/40 train_MASE=1.811188 validation_MASE=1.884674 best=1.884674
+history/selection epoch=4/40 train_MASE=1.796800 validation_MASE=1.844607 best=1.844607
+history/selection epoch=5/40 train_MASE=1.769339 validation_MASE=1.799586 best=1.799586
+history/selection epoch=6/40 train_MASE=1.726064 validation_MASE=1.782748 best=1.782748
+history/selection epoch=7/40 train_MASE=1.696181 validation_MASE=1.747272 best=1.747272
+history/selection epoch=8/40 train_MASE=1.682514 validation_MASE=1.737825 best=1.737825
+history/selection epoch=9/40 train_MASE=1.671493 validation_MASE=1.720168 best=1.720168
+history/selection epoch=10/40 train_MASE=1.662080 validation_MASE=1.713450 best=1.713450
+history/selection epoch=11/40 train_MASE=1.656850 validation_MASE=1.711570 best=1.711570
+history/selection epoch=12/40 train_MASE=1.650751 validation_MASE=1.714728 best=1.711570
+history/selection epoch=13/40 train_MASE=1.640261 validation_MASE=1.688689 best=1.688689
+history/selection epoch=14/40 train_MASE=1.632368 validation_MASE=1.659198 best=1.659198
+history/selection epoch=15/40 train_MASE=1.621975 validation_MASE=1.668189 best=1.659198
+history/selection epoch=16/40 train_MASE=1.617268 validation_MASE=1.661880 best=1.659198
+history/selection epoch=17/40 train_MASE=1.614088 validation_MASE=1.649043 best=1.649043
+history/selection epoch=18/40 train_MASE=1.607332 validation_MASE=1.652763 best=1.649043
+history/selection epoch=19/40 train_MASE=1.597589 validation_MASE=1.644556 best=1.644556
+history/selection epoch=20/40 train_MASE=1.595568 validation_MASE=1.642243 best=1.642243
+history/selection epoch=21/40 train_MASE=1.590408 validation_MASE=1.652682 best=1.642243
+history/selection epoch=22/40 train_MASE=1.589084 validation_MASE=1.633637 best=1.633637
+history/selection epoch=23/40 train_MASE=1.582775 validation_MASE=1.664664 best=1.633637
+history/selection epoch=24/40 train_MASE=1.578369 validation_MASE=1.639132 best=1.633637
+history/selection epoch=25/40 train_MASE=1.574722 validation_MASE=1.639999 best=1.633637
+history/selection epoch=26/40 train_MASE=1.571061 validation_MASE=1.655496 best=1.633637
+history/selection epoch=27/40 train_MASE=1.568928 validation_MASE=1.657764 best=1.633637
+history/selection epoch=28/40 train_MASE=1.567466 validation_MASE=1.644098 best=1.633637
+history/selection epoch=29/40 train_MASE=1.563897 validation_MASE=1.662012 best=1.633637
+history/selection epoch=30/40 train_MASE=1.565182 validation_MASE=1.645634 best=1.633637
+history/selection epoch=31/40 train_MASE=1.561967 validation_MASE=1.668565 best=1.633637
+history/selection epoch=32/40 train_MASE=1.557589 validation_MASE=1.648558 best=1.633637
+recent/selection epoch=1/10 train_MASE=2.053629 validation_MASE=1.644032 best=1.644032
+recent/selection epoch=2/10 train_MASE=2.031769 validation_MASE=1.659003 best=1.644032
+recent/selection epoch=3/10 train_MASE=2.011234 validation_MASE=1.670289 best=1.644032
+recent/selection epoch=4/10 train_MASE=2.003702 validation_MASE=1.677330 best=1.644032
+recent/selection epoch=5/10 train_MASE=1.995007 validation_MASE=1.683746 best=1.644032
+recent/selection epoch=6/10 train_MASE=1.977802 validation_MASE=1.689734 best=1.644032
+recent/selection epoch=7/10 train_MASE=1.974724 validation_MASE=1.699395 best=1.644032
+recent/selection epoch=8/10 train_MASE=1.974709 validation_MASE=1.703338 best=1.644032
+recent/selection epoch=9/10 train_MASE=1.969606 validation_MASE=1.704726 best=1.644032
+recent/selection epoch=10/10 train_MASE=1.961732 validation_MASE=1.706905 best=1.644032
+Historical-only channel calibration | dataset=Dengue-Colombia H=12 validated_channels=13/33 raw_MASE=1.633637 calibrated_MASE=1.569093
+Dengue-Colombia | train/refit | shape=(835, 33) | windows=788 | training_prefix=823 | fixed_test_origin=823 (2022-10-09) | training_output_H=12 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/refit epoch=1/22 train_MASE=1.868835
+history/refit epoch=2/22 train_MASE=1.820440
+history/refit epoch=3/22 train_MASE=1.802489
+history/refit epoch=4/22 train_MASE=1.783532
+history/refit epoch=5/22 train_MASE=1.752780
+history/refit epoch=6/22 train_MASE=1.713234
+history/refit epoch=7/22 train_MASE=1.691225
+history/refit epoch=8/22 train_MASE=1.670142
+history/refit epoch=9/22 train_MASE=1.658446
+history/refit epoch=10/22 train_MASE=1.646869
+history/refit epoch=11/22 train_MASE=1.642024
+history/refit epoch=12/22 train_MASE=1.628784
+history/refit epoch=13/22 train_MASE=1.618109
+history/refit epoch=14/22 train_MASE=1.608300
+history/refit epoch=15/22 train_MASE=1.604104
+history/refit epoch=16/22 train_MASE=1.601284
+history/refit epoch=17/22 train_MASE=1.589276
+history/refit epoch=18/22 train_MASE=1.589247
+history/refit epoch=19/22 train_MASE=1.584916
+history/refit epoch=20/22 train_MASE=1.584232
+history/refit epoch=21/22 train_MASE=1.575866
+history/refit epoch=22/22 train_MASE=1.574777
+Frozen selection={'history_epochs': 22, 'recent_epochs': 0, 'validation_mase': 1.6336371751171697, 'channel_calibration': [['seasonal', 0.25], None, ['seasonal', 0.25], None, None, None, ['seasonal', 0.5], None, ['seasonal', 0.25], None, None, ['seasonal', 0.25], None, None, ['ema', 0.25], None, None, None, ['seasonal', 0.25], ['seasonal', 0.25], None, None, ['seasonal', 0.25], ['seasonal', 0.25], ['seasonal', 0.25], None, None, None, None, ['seasonal', 0.25], None, None, ['mean4', 0.5]], 'channel_calibration_val': 1.5690925160692173, 'channel_uncalibrated_val': 1.6336371751171699} | mode=global_last | train_end=823 | seconds=45.8
+>>>>>>>testing : Dengue-Colombia_24_12_fixed_FTQNet_Dengue-Colombia_ftM_sl24_pl12_cycle52_fa0.9_fc1.0_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Dengue-Colombia | test/refit | shape=(835, 33) | windows=1 | training_prefix=823 | fixed_test_origin=823 (2022-10-09) | training_output_H=12 | leading_gap_initializations=132 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2022-10-09 | windows=1 | H=12 | reported_targets=356/396 | selection={'history_epochs': 22, 'recent_epochs': 0, 'validation_mase': 1.6336371751171697, 'channel_calibration': [['seasonal', 0.25], None, ['seasonal', 0.25], None, None, None, ['seasonal', 0.5], None, ['seasonal', 0.25], None, None, ['seasonal', 0.25], None, None, ['ema', 0.25], None, None, None, ['seasonal', 0.25], ['seasonal', 0.25], None, None, ['seasonal', 0.25], ['seasonal', 0.25], ['seasonal', 0.25], None, None, None, None, ['seasonal', 0.25], None, None, ['mean4', 0.5]], 'channel_calibration_val': 1.5690925160692173, 'channel_uncalibrated_val': 1.6336371751171699}
+EpiCast raw metrics | MAE:12.6006640298, RMSE:14.5709967405, SMAPE:34.8510107754, MASE:1.6939076817
+mse:0.5245950780526366, mae:0.3994964964093928

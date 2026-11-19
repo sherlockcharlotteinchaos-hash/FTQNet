@@ -1,0 +1,487 @@
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=False, cycle=1, d_model=64, data='M3-stool', data_path='M3_gut_abun.csv', des='microbiome', devices='0', dropout=0.0, embed='timeF', enc_in=308, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=4, freq='d', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='M3-stool_12_1', model_type='mlp', num_workers=0, patience=201, pct_start=0.3, pred_len=1, random_seed=7, root_path='./dataset/', seq_len=12, target='OT', test_flop=False, train_epochs=200, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 4
+Use GPU: cuda:0
+>>>>>>>start training : M3-stool_12_1_FTQNet_M3-stool_ftM_sl12_pl1_cycle1_fa0.9_fc1.0_fg4_seed7>>>>>>>>>>>>>>>>>>>>>>>>>>
+M3-stool: 332 samples, 308 original taxa, split 70/30 at 232
+Paper author-code: global Z-score (full matrix), +1 offset, no feature filtering
+train windows: 220; validation windows: 88; validation windows reused in train: 9
+WARNING: author protocol reuses validation data; reported MAE is NOT held-out test MAE.
+train 229
+val 88
+Validation MAE improved; saved checkpoint.
+Epoch: 1/200 | train MAE 0.0445953 | val MAE 0.0461254 | best val MAE 0.0461254 | 0.92s
+Validation MAE improved; saved checkpoint.
+Epoch: 2/200 | train MAE 0.0411534 | val MAE 0.0456337 | best val MAE 0.0456337 | 0.55s
+Validation MAE improved; saved checkpoint.
+Epoch: 3/200 | train MAE 0.0406374 | val MAE 0.0453807 | best val MAE 0.0453807 | 0.55s
+Epoch: 4/200 | train MAE 0.0405672 | val MAE 0.0455276 | best val MAE 0.0453807 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 5/200 | train MAE 0.0405605 | val MAE 0.0452109 | best val MAE 0.0452109 | 0.56s
+Epoch: 6/200 | train MAE 0.0403503 | val MAE 0.0453997 | best val MAE 0.0452109 | 0.55s
+Epoch: 7/200 | train MAE 0.0401016 | val MAE 0.0454118 | best val MAE 0.0452109 | 0.55s
+Validation MAE improved; saved checkpoint.
+Epoch: 8/200 | train MAE 0.0395342 | val MAE 0.0445826 | best val MAE 0.0445826 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 9/200 | train MAE 0.0392451 | val MAE 0.0440685 | best val MAE 0.0440685 | 0.56s
+Epoch: 10/200 | train MAE 0.0387204 | val MAE 0.0441862 | best val MAE 0.0440685 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 11/200 | train MAE 0.0384527 | val MAE 0.0439089 | best val MAE 0.0439089 | 0.57s
+Validation MAE improved; saved checkpoint.
+Epoch: 12/200 | train MAE 0.0383966 | val MAE 0.0436453 | best val MAE 0.0436453 | 0.55s
+Validation MAE improved; saved checkpoint.
+Epoch: 13/200 | train MAE 0.0382458 | val MAE 0.0436052 | best val MAE 0.0436052 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 14/200 | train MAE 0.0381339 | val MAE 0.0435506 | best val MAE 0.0435506 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 15/200 | train MAE 0.0379464 | val MAE 0.0434309 | best val MAE 0.0434309 | 0.56s
+Epoch: 16/200 | train MAE 0.0378280 | val MAE 0.0434426 | best val MAE 0.0434309 | 0.56s
+Epoch: 17/200 | train MAE 0.0380898 | val MAE 0.0437886 | best val MAE 0.0434309 | 0.55s
+Validation MAE improved; saved checkpoint.
+Epoch: 18/200 | train MAE 0.0376509 | val MAE 0.0433109 | best val MAE 0.0433109 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 19/200 | train MAE 0.0374921 | val MAE 0.0433031 | best val MAE 0.0433031 | 0.53s
+Epoch: 20/200 | train MAE 0.0376255 | val MAE 0.0433224 | best val MAE 0.0433031 | 0.57s
+Epoch: 21/200 | train MAE 0.0376027 | val MAE 0.0434255 | best val MAE 0.0433031 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 22/200 | train MAE 0.0375390 | val MAE 0.0432821 | best val MAE 0.0432821 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 23/200 | train MAE 0.0373407 | val MAE 0.0432754 | best val MAE 0.0432754 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 24/200 | train MAE 0.0372986 | val MAE 0.0431250 | best val MAE 0.0431250 | 0.55s
+Epoch: 25/200 | train MAE 0.0375778 | val MAE 0.0432650 | best val MAE 0.0431250 | 0.56s
+Epoch: 26/200 | train MAE 0.0372281 | val MAE 0.0432112 | best val MAE 0.0431250 | 0.56s
+Epoch: 27/200 | train MAE 0.0371571 | val MAE 0.0432421 | best val MAE 0.0431250 | 0.55s
+Validation MAE improved; saved checkpoint.
+Epoch: 28/200 | train MAE 0.0374574 | val MAE 0.0431140 | best val MAE 0.0431140 | 0.55s
+Epoch: 29/200 | train MAE 0.0370826 | val MAE 0.0431658 | best val MAE 0.0431140 | 0.56s
+Epoch: 30/200 | train MAE 0.0369202 | val MAE 0.0432754 | best val MAE 0.0431140 | 0.56s
+Epoch: 31/200 | train MAE 0.0368655 | val MAE 0.0433741 | best val MAE 0.0431140 | 0.56s
+Epoch: 32/200 | train MAE 0.0369395 | val MAE 0.0435990 | best val MAE 0.0431140 | 0.56s
+Epoch: 33/200 | train MAE 0.0367866 | val MAE 0.0433754 | best val MAE 0.0431140 | 0.57s
+Epoch: 34/200 | train MAE 0.0367446 | val MAE 0.0433117 | best val MAE 0.0431140 | 0.56s
+Epoch: 35/200 | train MAE 0.0363701 | val MAE 0.0431767 | best val MAE 0.0431140 | 0.55s
+Epoch: 36/200 | train MAE 0.0365309 | val MAE 0.0432371 | best val MAE 0.0431140 | 0.56s
+Epoch: 37/200 | train MAE 0.0362907 | val MAE 0.0434721 | best val MAE 0.0431140 | 0.55s
+Epoch: 38/200 | train MAE 0.0361871 | val MAE 0.0434191 | best val MAE 0.0431140 | 0.57s
+Epoch: 39/200 | train MAE 0.0363765 | val MAE 0.0431961 | best val MAE 0.0431140 | 0.56s
+Epoch: 40/200 | train MAE 0.0365106 | val MAE 0.0436799 | best val MAE 0.0431140 | 0.56s
+Epoch: 41/200 | train MAE 0.0362240 | val MAE 0.0432517 | best val MAE 0.0431140 | 0.55s
+Epoch: 42/200 | train MAE 0.0358696 | val MAE 0.0438993 | best val MAE 0.0431140 | 0.57s
+Epoch: 43/200 | train MAE 0.0361920 | val MAE 0.0433159 | best val MAE 0.0431140 | 0.56s
+Validation MAE improved; saved checkpoint.
+Epoch: 44/200 | train MAE 0.0359824 | val MAE 0.0429489 | best val MAE 0.0429489 | 0.56s
+Epoch: 45/200 | train MAE 0.0357367 | val MAE 0.0434188 | best val MAE 0.0429489 | 0.54s
+Epoch: 46/200 | train MAE 0.0355333 | val MAE 0.0437585 | best val MAE 0.0429489 | 0.56s
+Epoch: 47/200 | train MAE 0.0359453 | val MAE 0.0430536 | best val MAE 0.0429489 | 0.57s
+Epoch: 48/200 | train MAE 0.0354815 | val MAE 0.0432714 | best val MAE 0.0429489 | 0.56s
+Epoch: 49/200 | train MAE 0.0352978 | val MAE 0.0433821 | best val MAE 0.0429489 | 0.55s
+Epoch: 50/200 | train MAE 0.0352769 | val MAE 0.0434625 | best val MAE 0.0429489 | 0.55s
+Epoch: 51/200 | train MAE 0.0352511 | val MAE 0.0431396 | best val MAE 0.0429489 | 0.56s
+Epoch: 52/200 | train MAE 0.0354686 | val MAE 0.0434234 | best val MAE 0.0429489 | 0.56s
+Epoch: 53/200 | train MAE 0.0352326 | val MAE 0.0430943 | best val MAE 0.0429489 | 0.56s
+Epoch: 54/200 | train MAE 0.0349675 | val MAE 0.0433846 | best val MAE 0.0429489 | 0.56s
+Epoch: 55/200 | train MAE 0.0350659 | val MAE 0.0433401 | best val MAE 0.0429489 | 0.56s
+Epoch: 56/200 | train MAE 0.0351173 | val MAE 0.0438538 | best val MAE 0.0429489 | 0.56s
+Epoch: 57/200 | train MAE 0.0346635 | val MAE 0.0434214 | best val MAE 0.0429489 | 0.57s
+Epoch: 58/200 | train MAE 0.0347452 | val MAE 0.0435706 | best val MAE 0.0429489 | 0.52s
+Epoch: 59/200 | train MAE 0.0347343 | val MAE 0.0433066 | best val MAE 0.0429489 | 0.52s
+Epoch: 60/200 | train MAE 0.0347823 | val MAE 0.0435549 | best val MAE 0.0429489 | 0.57s
+Epoch: 61/200 | train MAE 0.0344225 | val MAE 0.0433746 | best val MAE 0.0429489 | 0.57s
+Epoch: 62/200 | train MAE 0.0343026 | val MAE 0.0436049 | best val MAE 0.0429489 | 0.56s
+Epoch: 63/200 | train MAE 0.0341574 | val MAE 0.0439067 | best val MAE 0.0429489 | 0.56s
+Epoch: 64/200 | train MAE 0.0347704 | val MAE 0.0437058 | best val MAE 0.0429489 | 0.56s
+Epoch: 65/200 | train MAE 0.0342982 | val MAE 0.0435187 | best val MAE 0.0429489 | 0.54s
+Epoch: 66/200 | train MAE 0.0340328 | val MAE 0.0441265 | best val MAE 0.0429489 | 0.55s
+Epoch: 67/200 | train MAE 0.0343086 | val MAE 0.0437008 | best val MAE 0.0429489 | 0.59s
+Epoch: 68/200 | train MAE 0.0341248 | val MAE 0.0441122 | best val MAE 0.0429489 | 0.58s
+Epoch: 69/200 | train MAE 0.0343476 | val MAE 0.0436180 | best val MAE 0.0429489 | 0.55s
+Epoch: 70/200 | train MAE 0.0339194 | val MAE 0.0436559 | best val MAE 0.0429489 | 0.57s
+Epoch: 71/200 | train MAE 0.0342226 | val MAE 0.0435829 | best val MAE 0.0429489 | 0.58s
+Epoch: 72/200 | train MAE 0.0337777 | val MAE 0.0433657 | best val MAE 0.0429489 | 0.54s
+Epoch: 73/200 | train MAE 0.0337570 | val MAE 0.0439462 | best val MAE 0.0429489 | 0.47s
+Epoch: 74/200 | train MAE 0.0338501 | val MAE 0.0439504 | best val MAE 0.0429489 | 0.51s
+Epoch: 75/200 | train MAE 0.0337996 | val MAE 0.0443720 | best val MAE 0.0429489 | 0.56s
+Epoch: 76/200 | train MAE 0.0337671 | val MAE 0.0438896 | best val MAE 0.0429489 | 0.39s
+Epoch: 77/200 | train MAE 0.0334245 | val MAE 0.0441940 | best val MAE 0.0429489 | 0.42s
+Epoch: 78/200 | train MAE 0.0335283 | val MAE 0.0439609 | best val MAE 0.0429489 | 0.57s
+Epoch: 79/200 | train MAE 0.0339125 | val MAE 0.0442549 | best val MAE 0.0429489 | 0.58s
+Epoch: 80/200 | train MAE 0.0333693 | val MAE 0.0442111 | best val MAE 0.0429489 | 0.59s
+Epoch: 81/200 | train MAE 0.0333737 | val MAE 0.0437521 | best val MAE 0.0429489 | 0.57s
+Epoch: 82/200 | train MAE 0.0333074 | val MAE 0.0441129 | best val MAE 0.0429489 | 0.46s
+Epoch: 83/200 | train MAE 0.0328900 | val MAE 0.0438674 | best val MAE 0.0429489 | 0.57s
+Epoch: 84/200 | train MAE 0.0332867 | val MAE 0.0441777 | best val MAE 0.0429489 | 0.57s
+Epoch: 85/200 | train MAE 0.0329495 | val MAE 0.0441603 | best val MAE 0.0429489 | 0.57s
+Epoch: 86/200 | train MAE 0.0328486 | val MAE 0.0443933 | best val MAE 0.0429489 | 0.57s
+Epoch: 87/200 | train MAE 0.0328995 | val MAE 0.0441484 | best val MAE 0.0429489 | 0.56s
+Epoch: 88/200 | train MAE 0.0329587 | val MAE 0.0441413 | best val MAE 0.0429489 | 0.55s
+Epoch: 89/200 | train MAE 0.0326821 | val MAE 0.0441830 | best val MAE 0.0429489 | 0.53s
+Epoch: 90/200 | train MAE 0.0326972 | val MAE 0.0441072 | best val MAE 0.0429489 | 0.52s
+Epoch: 91/200 | train MAE 0.0325758 | val MAE 0.0440223 | best val MAE 0.0429489 | 0.38s
+Epoch: 92/200 | train MAE 0.0324294 | val MAE 0.0443458 | best val MAE 0.0429489 | 0.58s
+Epoch: 93/200 | train MAE 0.0325146 | val MAE 0.0448209 | best val MAE 0.0429489 | 0.57s
+Epoch: 94/200 | train MAE 0.0324303 | val MAE 0.0443966 | best val MAE 0.0429489 | 0.57s
+Epoch: 95/200 | train MAE 0.0324649 | val MAE 0.0442583 | best val MAE 0.0429489 | 0.56s
+Epoch: 96/200 | train MAE 0.0323795 | val MAE 0.0444870 | best val MAE 0.0429489 | 0.55s
+Epoch: 97/200 | train MAE 0.0322305 | val MAE 0.0442392 | best val MAE 0.0429489 | 0.56s
+Epoch: 98/200 | train MAE 0.0323692 | val MAE 0.0447834 | best val MAE 0.0429489 | 0.57s
+Epoch: 99/200 | train MAE 0.0322757 | val MAE 0.0442890 | best val MAE 0.0429489 | 0.48s
+Epoch: 100/200 | train MAE 0.0322606 | val MAE 0.0440612 | best val MAE 0.0429489 | 0.56s
+Epoch: 101/200 | train MAE 0.0319130 | val MAE 0.0442150 | best val MAE 0.0429489 | 0.56s
+Epoch: 102/200 | train MAE 0.0322333 | val MAE 0.0449067 | best val MAE 0.0429489 | 0.59s
+Epoch: 103/200 | train MAE 0.0319916 | val MAE 0.0445024 | best val MAE 0.0429489 | 0.55s
+Epoch: 104/200 | train MAE 0.0314816 | val MAE 0.0445131 | best val MAE 0.0429489 | 0.57s
+Epoch: 105/200 | train MAE 0.0317534 | val MAE 0.0441721 | best val MAE 0.0429489 | 0.56s
+Epoch: 106/200 | train MAE 0.0316832 | val MAE 0.0439674 | best val MAE 0.0429489 | 0.50s
+Epoch: 107/200 | train MAE 0.0317539 | val MAE 0.0445273 | best val MAE 0.0429489 | 0.53s
+Epoch: 108/200 | train MAE 0.0317039 | val MAE 0.0447220 | best val MAE 0.0429489 | 0.60s
+Epoch: 109/200 | train MAE 0.0315271 | val MAE 0.0447636 | best val MAE 0.0429489 | 0.51s
+Epoch: 110/200 | train MAE 0.0316851 | val MAE 0.0445445 | best val MAE 0.0429489 | 0.57s
+Epoch: 111/200 | train MAE 0.0314112 | val MAE 0.0448881 | best val MAE 0.0429489 | 0.58s
+Epoch: 112/200 | train MAE 0.0312476 | val MAE 0.0452633 | best val MAE 0.0429489 | 0.56s
+Epoch: 113/200 | train MAE 0.0315374 | val MAE 0.0448626 | best val MAE 0.0429489 | 0.56s
+Epoch: 114/200 | train MAE 0.0312425 | val MAE 0.0449373 | best val MAE 0.0429489 | 0.42s
+Epoch: 115/200 | train MAE 0.0311519 | val MAE 0.0452788 | best val MAE 0.0429489 | 0.35s
+Epoch: 116/200 | train MAE 0.0315021 | val MAE 0.0448130 | best val MAE 0.0429489 | 0.56s
+Epoch: 117/200 | train MAE 0.0310638 | val MAE 0.0446877 | best val MAE 0.0429489 | 0.56s
+Epoch: 118/200 | train MAE 0.0307871 | val MAE 0.0448083 | best val MAE 0.0429489 | 0.56s
+Epoch: 119/200 | train MAE 0.0309541 | val MAE 0.0450238 | best val MAE 0.0429489 | 0.57s
+Epoch: 120/200 | train MAE 0.0307525 | val MAE 0.0443748 | best val MAE 0.0429489 | 0.58s
+Epoch: 121/200 | train MAE 0.0304731 | val MAE 0.0448358 | best val MAE 0.0429489 | 0.61s
+Epoch: 122/200 | train MAE 0.0306629 | val MAE 0.0448957 | best val MAE 0.0429489 | 0.57s
+Epoch: 123/200 | train MAE 0.0303975 | val MAE 0.0449521 | best val MAE 0.0429489 | 0.48s
+Epoch: 124/200 | train MAE 0.0302733 | val MAE 0.0449081 | best val MAE 0.0429489 | 0.49s
+Epoch: 125/200 | train MAE 0.0303872 | val MAE 0.0447663 | best val MAE 0.0429489 | 0.45s
+Epoch: 126/200 | train MAE 0.0301718 | val MAE 0.0452606 | best val MAE 0.0429489 | 0.57s
+Epoch: 127/200 | train MAE 0.0308733 | val MAE 0.0444508 | best val MAE 0.0429489 | 0.58s
+Epoch: 128/200 | train MAE 0.0302017 | val MAE 0.0446583 | best val MAE 0.0429489 | 0.57s
+Epoch: 129/200 | train MAE 0.0304113 | val MAE 0.0446643 | best val MAE 0.0429489 | 0.43s
+Epoch: 130/200 | train MAE 0.0300393 | val MAE 0.0452180 | best val MAE 0.0429489 | 0.34s
+Epoch: 131/200 | train MAE 0.0301822 | val MAE 0.0449611 | best val MAE 0.0429489 | 0.39s
+Epoch: 132/200 | train MAE 0.0300050 | val MAE 0.0451462 | best val MAE 0.0429489 | 0.57s
+Epoch: 133/200 | train MAE 0.0302662 | val MAE 0.0455107 | best val MAE 0.0429489 | 0.56s
+Epoch: 134/200 | train MAE 0.0297023 | val MAE 0.0456386 | best val MAE 0.0429489 | 0.51s
+Epoch: 135/200 | train MAE 0.0298866 | val MAE 0.0447971 | best val MAE 0.0429489 | 0.37s
+Epoch: 136/200 | train MAE 0.0294362 | val MAE 0.0449850 | best val MAE 0.0429489 | 0.40s
+Epoch: 137/200 | train MAE 0.0298150 | val MAE 0.0447306 | best val MAE 0.0429489 | 0.33s
+Epoch: 138/200 | train MAE 0.0296344 | val MAE 0.0446491 | best val MAE 0.0429489 | 0.36s
+Epoch: 139/200 | train MAE 0.0296015 | val MAE 0.0452771 | best val MAE 0.0429489 | 0.29s
+Epoch: 140/200 | train MAE 0.0296040 | val MAE 0.0450226 | best val MAE 0.0429489 | 0.47s
+Epoch: 141/200 | train MAE 0.0293082 | val MAE 0.0457345 | best val MAE 0.0429489 | 0.57s
+Epoch: 142/200 | train MAE 0.0294405 | val MAE 0.0449441 | best val MAE 0.0429489 | 0.56s
+Epoch: 143/200 | train MAE 0.0293150 | val MAE 0.0448188 | best val MAE 0.0429489 | 0.57s
+Epoch: 144/200 | train MAE 0.0291802 | val MAE 0.0448044 | best val MAE 0.0429489 | 0.56s
+Epoch: 145/200 | train MAE 0.0293315 | val MAE 0.0451364 | best val MAE 0.0429489 | 0.58s
+Epoch: 146/200 | train MAE 0.0288892 | val MAE 0.0452280 | best val MAE 0.0429489 | 0.55s
+Epoch: 147/200 | train MAE 0.0290362 | val MAE 0.0453768 | best val MAE 0.0429489 | 0.56s
+Epoch: 148/200 | train MAE 0.0289008 | val MAE 0.0449173 | best val MAE 0.0429489 | 0.57s
+Epoch: 149/200 | train MAE 0.0289588 | val MAE 0.0450566 | best val MAE 0.0429489 | 0.57s
+Epoch: 150/200 | train MAE 0.0289646 | val MAE 0.0449071 | best val MAE 0.0429489 | 0.57s
+Epoch: 151/200 | train MAE 0.0289760 | val MAE 0.0456869 | best val MAE 0.0429489 | 0.56s
+Epoch: 152/200 | train MAE 0.0290108 | val MAE 0.0451677 | best val MAE 0.0429489 | 0.57s
+Epoch: 153/200 | train MAE 0.0288515 | val MAE 0.0451061 | best val MAE 0.0429489 | 0.59s
+Epoch: 154/200 | train MAE 0.0285347 | val MAE 0.0452518 | best val MAE 0.0429489 | 0.60s
+Epoch: 155/200 | train MAE 0.0287806 | val MAE 0.0454998 | best val MAE 0.0429489 | 0.57s
+Epoch: 156/200 | train MAE 0.0287213 | val MAE 0.0454343 | best val MAE 0.0429489 | 0.57s
+Epoch: 157/200 | train MAE 0.0285593 | val MAE 0.0452322 | best val MAE 0.0429489 | 0.51s
+Epoch: 158/200 | train MAE 0.0282269 | val MAE 0.0454828 | best val MAE 0.0429489 | 0.58s
+Epoch: 159/200 | train MAE 0.0284492 | val MAE 0.0451909 | best val MAE 0.0429489 | 0.60s
+Epoch: 160/200 | train MAE 0.0284614 | val MAE 0.0448758 | best val MAE 0.0429489 | 0.56s
+Epoch: 161/200 | train MAE 0.0279225 | val MAE 0.0451849 | best val MAE 0.0429489 | 0.58s
+Epoch: 162/200 | train MAE 0.0282659 | val MAE 0.0455445 | best val MAE 0.0429489 | 0.57s
+Epoch: 163/200 | train MAE 0.0283054 | val MAE 0.0455934 | best val MAE 0.0429489 | 0.58s
+Epoch: 164/200 | train MAE 0.0280654 | val MAE 0.0453993 | best val MAE 0.0429489 | 0.57s
+Epoch: 165/200 | train MAE 0.0279494 | val MAE 0.0453173 | best val MAE 0.0429489 | 0.56s
+Epoch: 166/200 | train MAE 0.0279724 | val MAE 0.0453292 | best val MAE 0.0429489 | 0.56s
+Epoch: 167/200 | train MAE 0.0281667 | val MAE 0.0451478 | best val MAE 0.0429489 | 0.56s
+Epoch: 168/200 | train MAE 0.0280006 | val MAE 0.0453453 | best val MAE 0.0429489 | 0.55s
+Epoch: 169/200 | train MAE 0.0279174 | val MAE 0.0450788 | best val MAE 0.0429489 | 0.55s
+Epoch: 170/200 | train MAE 0.0280036 | val MAE 0.0450782 | best val MAE 0.0429489 | 0.56s
+Epoch: 171/200 | train MAE 0.0280674 | val MAE 0.0448543 | best val MAE 0.0429489 | 0.55s
+Epoch: 172/200 | train MAE 0.0279290 | val MAE 0.0450997 | best val MAE 0.0429489 | 0.56s
+Epoch: 173/200 | train MAE 0.0278916 | val MAE 0.0452666 | best val MAE 0.0429489 | 0.56s
+Epoch: 174/200 | train MAE 0.0280157 | val MAE 0.0446509 | best val MAE 0.0429489 | 0.56s
+Epoch: 175/200 | train MAE 0.0278418 | val MAE 0.0452507 | best val MAE 0.0429489 | 0.55s
+Epoch: 176/200 | train MAE 0.0274884 | val MAE 0.0452533 | best val MAE 0.0429489 | 0.55s
+Epoch: 177/200 | train MAE 0.0278069 | val MAE 0.0450467 | best val MAE 0.0429489 | 0.55s
+Epoch: 178/200 | train MAE 0.0277044 | val MAE 0.0451696 | best val MAE 0.0429489 | 0.55s
+Epoch: 179/200 | train MAE 0.0277477 | val MAE 0.0453666 | best val MAE 0.0429489 | 0.55s
+Epoch: 180/200 | train MAE 0.0275798 | val MAE 0.0453050 | best val MAE 0.0429489 | 0.51s
+Epoch: 181/200 | train MAE 0.0277566 | val MAE 0.0453421 | best val MAE 0.0429489 | 0.56s
+Epoch: 182/200 | train MAE 0.0278395 | val MAE 0.0455819 | best val MAE 0.0429489 | 0.56s
+Epoch: 183/200 | train MAE 0.0280905 | val MAE 0.0451172 | best val MAE 0.0429489 | 0.55s
+Epoch: 184/200 | train MAE 0.0273632 | val MAE 0.0456985 | best val MAE 0.0429489 | 0.56s
+Epoch: 185/200 | train MAE 0.0276429 | val MAE 0.0452743 | best val MAE 0.0429489 | 0.55s
+Epoch: 186/200 | train MAE 0.0274868 | val MAE 0.0466265 | best val MAE 0.0429489 | 0.56s
+Epoch: 187/200 | train MAE 0.0272828 | val MAE 0.0450034 | best val MAE 0.0429489 | 0.56s
+Epoch: 188/200 | train MAE 0.0273399 | val MAE 0.0450003 | best val MAE 0.0429489 | 0.56s
+Epoch: 189/200 | train MAE 0.0273754 | val MAE 0.0455545 | best val MAE 0.0429489 | 0.58s
+Epoch: 190/200 | train MAE 0.0272794 | val MAE 0.0449569 | best val MAE 0.0429489 | 0.56s
+Epoch: 191/200 | train MAE 0.0273461 | val MAE 0.0452733 | best val MAE 0.0429489 | 0.55s
+Epoch: 192/200 | train MAE 0.0273673 | val MAE 0.0453663 | best val MAE 0.0429489 | 0.55s
+Epoch: 193/200 | train MAE 0.0271555 | val MAE 0.0453350 | best val MAE 0.0429489 | 0.56s
+Epoch: 194/200 | train MAE 0.0271307 | val MAE 0.0453434 | best val MAE 0.0429489 | 0.57s
+Epoch: 195/200 | train MAE 0.0268591 | val MAE 0.0455755 | best val MAE 0.0429489 | 0.57s
+Epoch: 196/200 | train MAE 0.0267196 | val MAE 0.0451257 | best val MAE 0.0429489 | 0.57s
+Epoch: 197/200 | train MAE 0.0265778 | val MAE 0.0453070 | best val MAE 0.0429489 | 0.56s
+Epoch: 198/200 | train MAE 0.0270478 | val MAE 0.0450250 | best val MAE 0.0429489 | 0.55s
+Epoch: 199/200 | train MAE 0.0267882 | val MAE 0.0448830 | best val MAE 0.0429489 | 0.53s
+Epoch: 200/200 | train MAE 0.0268872 | val MAE 0.0451791 | best val MAE 0.0429489 | 0.50s
+Paper-aligned fit finished: best epoch 44 validation MAE 0.0429489
+>>>>>>>testing : M3-stool_12_1_FTQNet_M3-stool_ftM_sl12_pl1_cycle1_fa0.9_fc1.0_fg4_seed7<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Paper author protocol: test() reports the SAME 30% validation windows used for checkpoint selection.
+test 88
+mse:0.14362452924251556, mae:0.0429488867521286
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=False, cycle=1, d_model=64, data='M3-stool', data_path='M3_gut_abun.csv', des='microbiome', devices='0', dropout=0.3, embed='timeF', enc_in=308, features='M', flinear_alpha=0.9, flinear_c=0.1, flinear_groups=2, freq='d', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='M3-stool_12_8', model_type='mlp', num_workers=0, patience=201, pct_start=0.3, pred_len=8, random_seed=7, root_path='./dataset/', seq_len=12, target='OT', test_flop=False, train_epochs=200, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 0.1, groups: 2
+Use GPU: cuda:0
+>>>>>>>start training : M3-stool_12_8_FTQNet_M3-stool_ftM_sl12_pl8_cycle1_fa0.9_fc0.1_fg2_seed7>>>>>>>>>>>>>>>>>>>>>>>>>>
+M3-stool: 332 samples, 308 original taxa, split 70/30 at 232
+Paper author-code: global Z-score (full matrix), +1 offset, no feature filtering
+train windows: 213; validation windows: 81; validation windows reused in train: 9
+WARNING: author protocol reuses validation data; reported MAE is NOT held-out test MAE.
+train 222
+val 81
+Validation MAE improved; saved checkpoint.
+Epoch: 1/200 | train MAE 0.0484346 | val MAE 0.0485724 | best val MAE 0.0485724 | 0.90s
+Validation MAE improved; saved checkpoint.
+Epoch: 2/200 | train MAE 0.0459177 | val MAE 0.0480141 | best val MAE 0.0480141 | 0.55s
+Validation MAE improved; saved checkpoint.
+Epoch: 3/200 | train MAE 0.0453027 | val MAE 0.0479746 | best val MAE 0.0479746 | 0.53s
+Validation MAE improved; saved checkpoint.
+Epoch: 4/200 | train MAE 0.0450054 | val MAE 0.0479384 | best val MAE 0.0479384 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 5/200 | train MAE 0.0447257 | val MAE 0.0479200 | best val MAE 0.0479200 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 6/200 | train MAE 0.0446734 | val MAE 0.0478196 | best val MAE 0.0478196 | 0.50s
+Validation MAE improved; saved checkpoint.
+Epoch: 7/200 | train MAE 0.0441778 | val MAE 0.0473503 | best val MAE 0.0473503 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 8/200 | train MAE 0.0433950 | val MAE 0.0466713 | best val MAE 0.0466713 | 0.53s
+Validation MAE improved; saved checkpoint.
+Epoch: 9/200 | train MAE 0.0428681 | val MAE 0.0463895 | best val MAE 0.0463895 | 0.49s
+Validation MAE improved; saved checkpoint.
+Epoch: 10/200 | train MAE 0.0426955 | val MAE 0.0461862 | best val MAE 0.0461862 | 0.44s
+Validation MAE improved; saved checkpoint.
+Epoch: 11/200 | train MAE 0.0424052 | val MAE 0.0461533 | best val MAE 0.0461533 | 0.55s
+Validation MAE improved; saved checkpoint.
+Epoch: 12/200 | train MAE 0.0422844 | val MAE 0.0460690 | best val MAE 0.0460690 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 13/200 | train MAE 0.0420429 | val MAE 0.0460143 | best val MAE 0.0460143 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 14/200 | train MAE 0.0420308 | val MAE 0.0459958 | best val MAE 0.0459958 | 0.42s
+Validation MAE improved; saved checkpoint.
+Epoch: 15/200 | train MAE 0.0419498 | val MAE 0.0459764 | best val MAE 0.0459764 | 0.35s
+Validation MAE improved; saved checkpoint.
+Epoch: 16/200 | train MAE 0.0417946 | val MAE 0.0459624 | best val MAE 0.0459624 | 0.34s
+Validation MAE improved; saved checkpoint.
+Epoch: 17/200 | train MAE 0.0416144 | val MAE 0.0459283 | best val MAE 0.0459283 | 0.46s
+Validation MAE improved; saved checkpoint.
+Epoch: 18/200 | train MAE 0.0416558 | val MAE 0.0458600 | best val MAE 0.0458600 | 0.54s
+Epoch: 19/200 | train MAE 0.0414481 | val MAE 0.0459223 | best val MAE 0.0458600 | 0.54s
+Epoch: 20/200 | train MAE 0.0413957 | val MAE 0.0459459 | best val MAE 0.0458600 | 0.54s
+Epoch: 21/200 | train MAE 0.0413214 | val MAE 0.0458787 | best val MAE 0.0458600 | 0.54s
+Epoch: 22/200 | train MAE 0.0413282 | val MAE 0.0460313 | best val MAE 0.0458600 | 0.47s
+Validation MAE improved; saved checkpoint.
+Epoch: 23/200 | train MAE 0.0413572 | val MAE 0.0457600 | best val MAE 0.0457600 | 0.28s
+Validation MAE improved; saved checkpoint.
+Epoch: 24/200 | train MAE 0.0411132 | val MAE 0.0457239 | best val MAE 0.0457239 | 0.43s
+Epoch: 25/200 | train MAE 0.0412784 | val MAE 0.0458327 | best val MAE 0.0457239 | 0.54s
+Epoch: 26/200 | train MAE 0.0411151 | val MAE 0.0459377 | best val MAE 0.0457239 | 0.55s
+Epoch: 27/200 | train MAE 0.0410284 | val MAE 0.0457932 | best val MAE 0.0457239 | 0.54s
+Epoch: 28/200 | train MAE 0.0409376 | val MAE 0.0457560 | best val MAE 0.0457239 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 29/200 | train MAE 0.0409189 | val MAE 0.0456458 | best val MAE 0.0456458 | 0.55s
+Validation MAE improved; saved checkpoint.
+Epoch: 30/200 | train MAE 0.0408573 | val MAE 0.0456306 | best val MAE 0.0456306 | 0.44s
+Epoch: 31/200 | train MAE 0.0407836 | val MAE 0.0458274 | best val MAE 0.0456306 | 0.55s
+Epoch: 32/200 | train MAE 0.0408648 | val MAE 0.0456976 | best val MAE 0.0456306 | 0.54s
+Epoch: 33/200 | train MAE 0.0407970 | val MAE 0.0456743 | best val MAE 0.0456306 | 0.54s
+Epoch: 34/200 | train MAE 0.0407906 | val MAE 0.0456721 | best val MAE 0.0456306 | 0.55s
+Epoch: 35/200 | train MAE 0.0405275 | val MAE 0.0457460 | best val MAE 0.0456306 | 0.54s
+Epoch: 36/200 | train MAE 0.0406812 | val MAE 0.0459585 | best val MAE 0.0456306 | 0.54s
+Epoch: 37/200 | train MAE 0.0403907 | val MAE 0.0456728 | best val MAE 0.0456306 | 0.48s
+Epoch: 38/200 | train MAE 0.0404750 | val MAE 0.0456629 | best val MAE 0.0456306 | 0.48s
+Validation MAE improved; saved checkpoint.
+Epoch: 39/200 | train MAE 0.0403681 | val MAE 0.0456191 | best val MAE 0.0456191 | 0.54s
+Epoch: 40/200 | train MAE 0.0404149 | val MAE 0.0456510 | best val MAE 0.0456191 | 0.54s
+Epoch: 41/200 | train MAE 0.0403100 | val MAE 0.0456958 | best val MAE 0.0456191 | 0.54s
+Epoch: 42/200 | train MAE 0.0403175 | val MAE 0.0457494 | best val MAE 0.0456191 | 0.55s
+Epoch: 43/200 | train MAE 0.0401956 | val MAE 0.0457054 | best val MAE 0.0456191 | 0.55s
+Epoch: 44/200 | train MAE 0.0402940 | val MAE 0.0458259 | best val MAE 0.0456191 | 0.54s
+Epoch: 45/200 | train MAE 0.0400277 | val MAE 0.0457390 | best val MAE 0.0456191 | 0.54s
+Epoch: 46/200 | train MAE 0.0399643 | val MAE 0.0456964 | best val MAE 0.0456191 | 0.54s
+Epoch: 47/200 | train MAE 0.0399793 | val MAE 0.0457131 | best val MAE 0.0456191 | 0.54s
+Epoch: 48/200 | train MAE 0.0398021 | val MAE 0.0456696 | best val MAE 0.0456191 | 0.54s
+Epoch: 49/200 | train MAE 0.0398865 | val MAE 0.0456362 | best val MAE 0.0456191 | 0.53s
+Validation MAE improved; saved checkpoint.
+Epoch: 50/200 | train MAE 0.0398628 | val MAE 0.0455487 | best val MAE 0.0455487 | 0.54s
+Epoch: 51/200 | train MAE 0.0397068 | val MAE 0.0455790 | best val MAE 0.0455487 | 0.54s
+Epoch: 52/200 | train MAE 0.0397780 | val MAE 0.0456210 | best val MAE 0.0455487 | 0.53s
+Epoch: 53/200 | train MAE 0.0395390 | val MAE 0.0455753 | best val MAE 0.0455487 | 0.53s
+Validation MAE improved; saved checkpoint.
+Epoch: 54/200 | train MAE 0.0396199 | val MAE 0.0455340 | best val MAE 0.0455340 | 0.53s
+Validation MAE improved; saved checkpoint.
+Epoch: 55/200 | train MAE 0.0396696 | val MAE 0.0455249 | best val MAE 0.0455249 | 0.53s
+Validation MAE improved; saved checkpoint.
+Epoch: 56/200 | train MAE 0.0395833 | val MAE 0.0454992 | best val MAE 0.0454992 | 0.52s
+Epoch: 57/200 | train MAE 0.0396081 | val MAE 0.0455250 | best val MAE 0.0454992 | 0.53s
+Epoch: 58/200 | train MAE 0.0394853 | val MAE 0.0455168 | best val MAE 0.0454992 | 0.54s
+Epoch: 59/200 | train MAE 0.0395511 | val MAE 0.0455623 | best val MAE 0.0454992 | 0.53s
+Epoch: 60/200 | train MAE 0.0394265 | val MAE 0.0456769 | best val MAE 0.0454992 | 0.53s
+Epoch: 61/200 | train MAE 0.0391857 | val MAE 0.0455409 | best val MAE 0.0454992 | 0.53s
+Epoch: 62/200 | train MAE 0.0391936 | val MAE 0.0455126 | best val MAE 0.0454992 | 0.56s
+Epoch: 63/200 | train MAE 0.0392935 | val MAE 0.0455067 | best val MAE 0.0454992 | 0.44s
+Validation MAE improved; saved checkpoint.
+Epoch: 64/200 | train MAE 0.0393865 | val MAE 0.0454310 | best val MAE 0.0454310 | 0.47s
+Epoch: 65/200 | train MAE 0.0390448 | val MAE 0.0455725 | best val MAE 0.0454310 | 0.56s
+Epoch: 66/200 | train MAE 0.0392486 | val MAE 0.0454873 | best val MAE 0.0454310 | 0.53s
+Epoch: 67/200 | train MAE 0.0389963 | val MAE 0.0455273 | best val MAE 0.0454310 | 0.54s
+Epoch: 68/200 | train MAE 0.0390346 | val MAE 0.0455044 | best val MAE 0.0454310 | 0.54s
+Epoch: 69/200 | train MAE 0.0389879 | val MAE 0.0455230 | best val MAE 0.0454310 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 70/200 | train MAE 0.0390046 | val MAE 0.0454259 | best val MAE 0.0454259 | 0.54s
+Epoch: 71/200 | train MAE 0.0390241 | val MAE 0.0454868 | best val MAE 0.0454259 | 0.51s
+Epoch: 72/200 | train MAE 0.0390117 | val MAE 0.0454806 | best val MAE 0.0454259 | 0.54s
+Epoch: 73/200 | train MAE 0.0388210 | val MAE 0.0454675 | best val MAE 0.0454259 | 0.55s
+Epoch: 74/200 | train MAE 0.0388982 | val MAE 0.0454490 | best val MAE 0.0454259 | 0.53s
+Epoch: 75/200 | train MAE 0.0388952 | val MAE 0.0454878 | best val MAE 0.0454259 | 0.54s
+Epoch: 76/200 | train MAE 0.0387622 | val MAE 0.0455523 | best val MAE 0.0454259 | 0.54s
+Epoch: 77/200 | train MAE 0.0388684 | val MAE 0.0454558 | best val MAE 0.0454259 | 0.55s
+Epoch: 78/200 | train MAE 0.0387194 | val MAE 0.0455800 | best val MAE 0.0454259 | 0.55s
+Epoch: 79/200 | train MAE 0.0386842 | val MAE 0.0455373 | best val MAE 0.0454259 | 0.53s
+Epoch: 80/200 | train MAE 0.0387304 | val MAE 0.0456759 | best val MAE 0.0454259 | 0.54s
+Epoch: 81/200 | train MAE 0.0387397 | val MAE 0.0455671 | best val MAE 0.0454259 | 0.55s
+Epoch: 82/200 | train MAE 0.0386953 | val MAE 0.0455219 | best val MAE 0.0454259 | 0.55s
+Epoch: 83/200 | train MAE 0.0385885 | val MAE 0.0454749 | best val MAE 0.0454259 | 0.54s
+Epoch: 84/200 | train MAE 0.0386295 | val MAE 0.0454441 | best val MAE 0.0454259 | 0.54s
+Epoch: 85/200 | train MAE 0.0386654 | val MAE 0.0455034 | best val MAE 0.0454259 | 0.54s
+Epoch: 86/200 | train MAE 0.0385923 | val MAE 0.0454480 | best val MAE 0.0454259 | 0.53s
+Validation MAE improved; saved checkpoint.
+Epoch: 87/200 | train MAE 0.0384926 | val MAE 0.0454156 | best val MAE 0.0454156 | 0.53s
+Epoch: 88/200 | train MAE 0.0384010 | val MAE 0.0455536 | best val MAE 0.0454156 | 0.53s
+Epoch: 89/200 | train MAE 0.0384147 | val MAE 0.0454531 | best val MAE 0.0454156 | 0.53s
+Epoch: 90/200 | train MAE 0.0386043 | val MAE 0.0454214 | best val MAE 0.0454156 | 0.54s
+Epoch: 91/200 | train MAE 0.0383588 | val MAE 0.0456081 | best val MAE 0.0454156 | 0.52s
+Epoch: 92/200 | train MAE 0.0384512 | val MAE 0.0456168 | best val MAE 0.0454156 | 0.53s
+Validation MAE improved; saved checkpoint.
+Epoch: 93/200 | train MAE 0.0382805 | val MAE 0.0453750 | best val MAE 0.0453750 | 0.53s
+Epoch: 94/200 | train MAE 0.0383234 | val MAE 0.0455085 | best val MAE 0.0453750 | 0.53s
+Epoch: 95/200 | train MAE 0.0381908 | val MAE 0.0453912 | best val MAE 0.0453750 | 0.54s
+Epoch: 96/200 | train MAE 0.0382594 | val MAE 0.0454328 | best val MAE 0.0453750 | 0.53s
+Epoch: 97/200 | train MAE 0.0383170 | val MAE 0.0455225 | best val MAE 0.0453750 | 0.53s
+Epoch: 98/200 | train MAE 0.0382287 | val MAE 0.0455494 | best val MAE 0.0453750 | 0.53s
+Epoch: 99/200 | train MAE 0.0382393 | val MAE 0.0454010 | best val MAE 0.0453750 | 0.55s
+Epoch: 100/200 | train MAE 0.0381393 | val MAE 0.0455740 | best val MAE 0.0453750 | 0.54s
+Epoch: 101/200 | train MAE 0.0382497 | val MAE 0.0454293 | best val MAE 0.0453750 | 0.54s
+Epoch: 102/200 | train MAE 0.0380733 | val MAE 0.0454151 | best val MAE 0.0453750 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 103/200 | train MAE 0.0380169 | val MAE 0.0453472 | best val MAE 0.0453472 | 0.55s
+Epoch: 104/200 | train MAE 0.0380194 | val MAE 0.0453639 | best val MAE 0.0453472 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 105/200 | train MAE 0.0379197 | val MAE 0.0452943 | best val MAE 0.0452943 | 0.54s
+Epoch: 106/200 | train MAE 0.0380843 | val MAE 0.0453595 | best val MAE 0.0452943 | 0.52s
+Epoch: 107/200 | train MAE 0.0380935 | val MAE 0.0453307 | best val MAE 0.0452943 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 108/200 | train MAE 0.0379558 | val MAE 0.0452792 | best val MAE 0.0452792 | 0.54s
+Epoch: 109/200 | train MAE 0.0380342 | val MAE 0.0453388 | best val MAE 0.0452792 | 0.52s
+Epoch: 110/200 | train MAE 0.0379847 | val MAE 0.0453104 | best val MAE 0.0452792 | 0.47s
+Epoch: 111/200 | train MAE 0.0379277 | val MAE 0.0453458 | best val MAE 0.0452792 | 0.50s
+Epoch: 112/200 | train MAE 0.0380896 | val MAE 0.0453785 | best val MAE 0.0452792 | 0.53s
+Epoch: 113/200 | train MAE 0.0380478 | val MAE 0.0453342 | best val MAE 0.0452792 | 0.52s
+Epoch: 114/200 | train MAE 0.0379517 | val MAE 0.0453132 | best val MAE 0.0452792 | 0.53s
+Epoch: 115/200 | train MAE 0.0379337 | val MAE 0.0453768 | best val MAE 0.0452792 | 0.55s
+Epoch: 116/200 | train MAE 0.0378348 | val MAE 0.0453288 | best val MAE 0.0452792 | 0.53s
+Epoch: 117/200 | train MAE 0.0377599 | val MAE 0.0453094 | best val MAE 0.0452792 | 0.56s
+Epoch: 118/200 | train MAE 0.0378721 | val MAE 0.0453775 | best val MAE 0.0452792 | 0.54s
+Epoch: 119/200 | train MAE 0.0378914 | val MAE 0.0454692 | best val MAE 0.0452792 | 0.53s
+Epoch: 120/200 | train MAE 0.0378741 | val MAE 0.0453336 | best val MAE 0.0452792 | 0.53s
+Validation MAE improved; saved checkpoint.
+Epoch: 121/200 | train MAE 0.0378838 | val MAE 0.0452747 | best val MAE 0.0452747 | 0.53s
+Epoch: 122/200 | train MAE 0.0378076 | val MAE 0.0453394 | best val MAE 0.0452747 | 0.53s
+Epoch: 123/200 | train MAE 0.0377316 | val MAE 0.0453008 | best val MAE 0.0452747 | 0.54s
+Epoch: 124/200 | train MAE 0.0377189 | val MAE 0.0453436 | best val MAE 0.0452747 | 0.53s
+Epoch: 125/200 | train MAE 0.0377067 | val MAE 0.0453362 | best val MAE 0.0452747 | 0.53s
+Epoch: 126/200 | train MAE 0.0377509 | val MAE 0.0453201 | best val MAE 0.0452747 | 0.55s
+Epoch: 127/200 | train MAE 0.0376986 | val MAE 0.0453827 | best val MAE 0.0452747 | 0.53s
+Epoch: 128/200 | train MAE 0.0376845 | val MAE 0.0454007 | best val MAE 0.0452747 | 0.54s
+Epoch: 129/200 | train MAE 0.0375287 | val MAE 0.0453660 | best val MAE 0.0452747 | 0.53s
+Epoch: 130/200 | train MAE 0.0376680 | val MAE 0.0454908 | best val MAE 0.0452747 | 0.53s
+Epoch: 131/200 | train MAE 0.0375525 | val MAE 0.0453413 | best val MAE 0.0452747 | 0.53s
+Epoch: 132/200 | train MAE 0.0376421 | val MAE 0.0453958 | best val MAE 0.0452747 | 0.52s
+Epoch: 133/200 | train MAE 0.0376710 | val MAE 0.0453108 | best val MAE 0.0452747 | 0.53s
+Epoch: 134/200 | train MAE 0.0375261 | val MAE 0.0453725 | best val MAE 0.0452747 | 0.53s
+Epoch: 135/200 | train MAE 0.0376326 | val MAE 0.0454860 | best val MAE 0.0452747 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 136/200 | train MAE 0.0376721 | val MAE 0.0452392 | best val MAE 0.0452392 | 0.54s
+Epoch: 137/200 | train MAE 0.0374016 | val MAE 0.0454404 | best val MAE 0.0452392 | 0.53s
+Epoch: 138/200 | train MAE 0.0375430 | val MAE 0.0453872 | best val MAE 0.0452392 | 0.53s
+Epoch: 139/200 | train MAE 0.0374996 | val MAE 0.0453176 | best val MAE 0.0452392 | 0.54s
+Validation MAE improved; saved checkpoint.
+Epoch: 140/200 | train MAE 0.0374579 | val MAE 0.0452327 | best val MAE 0.0452327 | 0.53s
+Epoch: 141/200 | train MAE 0.0375152 | val MAE 0.0452772 | best val MAE 0.0452327 | 0.48s
+Epoch: 142/200 | train MAE 0.0374503 | val MAE 0.0453758 | best val MAE 0.0452327 | 0.54s
+Epoch: 143/200 | train MAE 0.0374451 | val MAE 0.0453934 | best val MAE 0.0452327 | 0.55s
+Epoch: 144/200 | train MAE 0.0374167 | val MAE 0.0454762 | best val MAE 0.0452327 | 0.56s
+Epoch: 145/200 | train MAE 0.0374794 | val MAE 0.0453226 | best val MAE 0.0452327 | 0.55s
+Epoch: 146/200 | train MAE 0.0375263 | val MAE 0.0453492 | best val MAE 0.0452327 | 0.54s
+Epoch: 147/200 | train MAE 0.0372271 | val MAE 0.0453358 | best val MAE 0.0452327 | 0.54s
+Epoch: 148/200 | train MAE 0.0372726 | val MAE 0.0455332 | best val MAE 0.0452327 | 0.55s
+Epoch: 149/200 | train MAE 0.0374072 | val MAE 0.0453531 | best val MAE 0.0452327 | 0.54s
+Epoch: 150/200 | train MAE 0.0373300 | val MAE 0.0454224 | best val MAE 0.0452327 | 0.60s
+Epoch: 151/200 | train MAE 0.0372903 | val MAE 0.0455100 | best val MAE 0.0452327 | 0.59s
+Epoch: 152/200 | train MAE 0.0371628 | val MAE 0.0454249 | best val MAE 0.0452327 | 0.30s
+Epoch: 153/200 | train MAE 0.0372716 | val MAE 0.0455296 | best val MAE 0.0452327 | 0.43s
+Epoch: 154/200 | train MAE 0.0373792 | val MAE 0.0454215 | best val MAE 0.0452327 | 0.55s
+Epoch: 155/200 | train MAE 0.0371900 | val MAE 0.0454353 | best val MAE 0.0452327 | 0.54s
+Epoch: 156/200 | train MAE 0.0372451 | val MAE 0.0454445 | best val MAE 0.0452327 | 0.54s
+Epoch: 157/200 | train MAE 0.0371496 | val MAE 0.0454044 | best val MAE 0.0452327 | 0.43s
+Epoch: 158/200 | train MAE 0.0371925 | val MAE 0.0453671 | best val MAE 0.0452327 | 0.46s
+Epoch: 159/200 | train MAE 0.0371277 | val MAE 0.0453672 | best val MAE 0.0452327 | 0.54s
+Epoch: 160/200 | train MAE 0.0372427 | val MAE 0.0453542 | best val MAE 0.0452327 | 0.53s
+Epoch: 161/200 | train MAE 0.0372392 | val MAE 0.0453903 | best val MAE 0.0452327 | 0.48s
+Epoch: 162/200 | train MAE 0.0373203 | val MAE 0.0454700 | best val MAE 0.0452327 | 0.55s
+Epoch: 163/200 | train MAE 0.0371898 | val MAE 0.0454076 | best val MAE 0.0452327 | 0.53s
+Epoch: 164/200 | train MAE 0.0371940 | val MAE 0.0453851 | best val MAE 0.0452327 | 0.51s
+Epoch: 165/200 | train MAE 0.0371854 | val MAE 0.0453687 | best val MAE 0.0452327 | 0.47s
+Epoch: 166/200 | train MAE 0.0371964 | val MAE 0.0454578 | best val MAE 0.0452327 | 0.50s
+Epoch: 167/200 | train MAE 0.0371401 | val MAE 0.0454776 | best val MAE 0.0452327 | 0.55s
+Epoch: 168/200 | train MAE 0.0371039 | val MAE 0.0453794 | best val MAE 0.0452327 | 0.46s
+Epoch: 169/200 | train MAE 0.0370152 | val MAE 0.0454684 | best val MAE 0.0452327 | 0.52s
+Epoch: 170/200 | train MAE 0.0370536 | val MAE 0.0454387 | best val MAE 0.0452327 | 0.53s
+Epoch: 171/200 | train MAE 0.0371238 | val MAE 0.0454188 | best val MAE 0.0452327 | 0.27s
+Epoch: 172/200 | train MAE 0.0370101 | val MAE 0.0454345 | best val MAE 0.0452327 | 0.55s
+Epoch: 173/200 | train MAE 0.0371341 | val MAE 0.0455016 | best val MAE 0.0452327 | 0.43s
+Epoch: 174/200 | train MAE 0.0371777 | val MAE 0.0455234 | best val MAE 0.0452327 | 0.51s
+Epoch: 175/200 | train MAE 0.0372133 | val MAE 0.0453920 | best val MAE 0.0452327 | 0.54s
+Epoch: 176/200 | train MAE 0.0370926 | val MAE 0.0453605 | best val MAE 0.0452327 | 0.51s
+Epoch: 177/200 | train MAE 0.0369668 | val MAE 0.0454077 | best val MAE 0.0452327 | 0.55s
+Epoch: 178/200 | train MAE 0.0370886 | val MAE 0.0454622 | best val MAE 0.0452327 | 0.55s
+Epoch: 179/200 | train MAE 0.0369291 | val MAE 0.0455121 | best val MAE 0.0452327 | 0.54s
+Epoch: 180/200 | train MAE 0.0368180 | val MAE 0.0454044 | best val MAE 0.0452327 | 0.52s
+Epoch: 181/200 | train MAE 0.0368369 | val MAE 0.0455095 | best val MAE 0.0452327 | 0.54s
+Epoch: 182/200 | train MAE 0.0370218 | val MAE 0.0454053 | best val MAE 0.0452327 | 0.54s
+Epoch: 183/200 | train MAE 0.0368557 | val MAE 0.0453621 | best val MAE 0.0452327 | 0.55s
+Epoch: 184/200 | train MAE 0.0368602 | val MAE 0.0455527 | best val MAE 0.0452327 | 0.53s
+Epoch: 185/200 | train MAE 0.0370062 | val MAE 0.0455032 | best val MAE 0.0452327 | 0.54s
+Epoch: 186/200 | train MAE 0.0369881 | val MAE 0.0455073 | best val MAE 0.0452327 | 0.55s
+Epoch: 187/200 | train MAE 0.0369382 | val MAE 0.0454229 | best val MAE 0.0452327 | 0.51s
+Epoch: 188/200 | train MAE 0.0368836 | val MAE 0.0454919 | best val MAE 0.0452327 | 0.39s
+Epoch: 189/200 | train MAE 0.0369557 | val MAE 0.0454208 | best val MAE 0.0452327 | 0.46s
+Epoch: 190/200 | train MAE 0.0368984 | val MAE 0.0454555 | best val MAE 0.0452327 | 0.51s
+Epoch: 191/200 | train MAE 0.0368645 | val MAE 0.0454811 | best val MAE 0.0452327 | 0.52s
+Epoch: 192/200 | train MAE 0.0367997 | val MAE 0.0454579 | best val MAE 0.0452327 | 0.35s
+Epoch: 193/200 | train MAE 0.0369426 | val MAE 0.0455235 | best val MAE 0.0452327 | 0.44s
+Epoch: 194/200 | train MAE 0.0368451 | val MAE 0.0455117 | best val MAE 0.0452327 | 0.55s
+Epoch: 195/200 | train MAE 0.0370059 | val MAE 0.0455131 | best val MAE 0.0452327 | 0.50s
+Epoch: 196/200 | train MAE 0.0367544 | val MAE 0.0454360 | best val MAE 0.0452327 | 0.53s
+Epoch: 197/200 | train MAE 0.0368077 | val MAE 0.0455455 | best val MAE 0.0452327 | 0.53s
+Epoch: 198/200 | train MAE 0.0367300 | val MAE 0.0454747 | best val MAE 0.0452327 | 0.55s
+Epoch: 199/200 | train MAE 0.0368225 | val MAE 0.0455249 | best val MAE 0.0452327 | 0.51s
+Epoch: 200/200 | train MAE 0.0368420 | val MAE 0.0454784 | best val MAE 0.0452327 | 0.57s
+Paper-aligned fit finished: best epoch 140 validation MAE 0.0452327
+>>>>>>>testing : M3-stool_12_8_FTQNet_M3-stool_ftM_sl12_pl8_cycle1_fa0.9_fc0.1_fg2_seed7<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Paper author protocol: test() reports the SAME 30% validation windows used for checkpoint selection.
+test 81
+mse:0.15361365675926208, mae:0.04523266851902008

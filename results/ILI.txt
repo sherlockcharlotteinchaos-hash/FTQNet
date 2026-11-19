@@ -1,0 +1,94 @@
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=False, cycle=4, d_model=512, data='ILI', data_path='ILI.csv', des='test', devices='0,1', dropout=0.1, embed='timeF', enc_in=7, features='M', flinear_alpha=0.99, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='type1', model='FTQNet', model_id='ILI_104_24', model_type='mlp', num_workers=1, patience=5, pct_start=0.3, pred_len=24, random_seed=2021, root_path='./dataset/', seq_len=104, target='OT', test_flop=False, train_epochs=100, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.99, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : ILI_104_24_FTQNet_ILI_ftM_sl104_pl24_cycle4_fa0.99_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+ILI train: 548 windows, 68 batches, drop_last=True
+ILI val: 74 windows, 10 batches, drop_last=False
+Epoch 1 train=0.43762736 val=0.30100627
+Epoch 2 train=0.36437565 val=0.33933107
+Epoch 3 train=0.31971741 val=0.34332279
+Epoch 4 train=0.28749953 val=0.31050861
+Epoch 5 train=0.27116497 val=0.29801238
+Epoch 6 train=0.26420617 val=0.29481363
+Epoch 7 train=0.26027900 val=0.31101961
+Epoch 8 train=0.25790970 val=0.30685814
+Epoch 9 train=0.25546396 val=0.31075753
+Epoch 10 train=0.25704376 val=0.30577188
+Epoch 11 train=0.25632656 val=0.30041090
+Early stopping at epoch 11 (best epoch 6)
+Training complete: epochs=11 best_epoch=6 best_val=0.29481363
+>>>>>>>testing : ILI_104_24_FTQNet_ILI_ftM_sl104_pl24_cycle4_fa0.99_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ILI test: 171 windows, 22 batches, drop_last=False
+mse:1.642119924856079, mae:0.7731623891088126
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=False, cycle=4, d_model=512, data='ILI', data_path='ILI.csv', des='test', devices='0,1', dropout=0.15, embed='timeF', enc_in=7, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='type1', model='FTQNet', model_id='ILI_104_36', model_type='mlp', num_workers=1, patience=5, pct_start=0.3, pred_len=36, random_seed=2021, root_path='./dataset/', seq_len=104, target='OT', test_flop=False, train_epochs=100, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : ILI_104_36_FTQNet_ILI_ftM_sl104_pl36_cycle4_fa0.9_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+ILI train: 536 windows, 67 batches, drop_last=True
+ILI val: 62 windows, 8 batches, drop_last=False
+Epoch 1 train=0.46339880 val=0.30170767
+Epoch 2 train=0.38604506 val=0.30609852
+Epoch 3 train=0.34243958 val=0.30210535
+Epoch 4 train=0.31941979 val=0.29710956
+Epoch 5 train=0.30780785 val=0.28544237
+Epoch 6 train=0.30255274 val=0.27633863
+Epoch 7 train=0.30038772 val=0.28087845
+Epoch 8 train=0.29866921 val=0.28115822
+Epoch 9 train=0.29758934 val=0.28146366
+Epoch 10 train=0.29756079 val=0.28177270
+Epoch 11 train=0.29702995 val=0.28175798
+Early stopping at epoch 11 (best epoch 6)
+Training complete: epochs=11 best_epoch=6 best_val=0.27633863
+>>>>>>>testing : ILI_104_36_FTQNet_ILI_ftM_sl104_pl36_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ILI test: 159 windows, 20 batches, drop_last=False
+mse:1.6012563252791063, mae:0.8045688002596737
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=False, cycle=4, d_model=1024, data='ILI', data_path='ILI.csv', des='test', devices='0,1', dropout=0.05, embed='timeF', enc_in=7, features='M', flinear_alpha=0.999, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.0005, loss='mae', lradj='type1', model='FTQNet', model_id='ILI_104_48', model_type='mlp', num_workers=1, patience=5, pct_start=0.3, pred_len=48, random_seed=2021, root_path='./dataset/', seq_len=104, target='OT', test_flop=False, train_epochs=100, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.999, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : ILI_104_48_FTQNet_ILI_ftM_sl104_pl48_cycle4_fa0.999_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+ILI train: 524 windows, 65 batches, drop_last=True
+ILI val: 50 windows, 7 batches, drop_last=False
+Epoch 1 train=0.44560763 val=0.29423298
+Epoch 2 train=0.37049124 val=0.30994929
+Epoch 3 train=0.32193121 val=0.27963334
+Epoch 4 train=0.29367709 val=0.29616839
+Epoch 5 train=0.28044485 val=0.28137984
+Epoch 6 train=0.27290352 val=0.27894974
+Epoch 7 train=0.26791333 val=0.28537195
+Epoch 8 train=0.26411532 val=0.28772565
+Epoch 9 train=0.26559267 val=0.27742290
+Epoch 10 train=0.26342509 val=0.27670767
+Epoch 11 train=0.26398505 val=0.28329416
+Epoch 12 train=0.26375217 val=0.28301007
+Epoch 13 train=0.26522574 val=0.27693218
+Epoch 14 train=0.26481152 val=0.28779525
+Epoch 15 train=0.26484877 val=0.28394425
+Early stopping at epoch 15 (best epoch 10)
+Training complete: epochs=15 best_epoch=10 best_val=0.27670767
+>>>>>>>testing : ILI_104_48_FTQNet_ILI_ftM_sl104_pl48_cycle4_fa0.999_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ILI test: 147 windows, 19 batches, drop_last=False
+mse:1.6249498910262075, mae:0.7973471654948503
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=False, cycle=4, d_model=1024, data='ILI', data_path='ILI.csv', des='test', devices='0,1', dropout=0.0, embed='timeF', enc_in=7, features='M', flinear_alpha=0.999, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='type1', model='FTQNet', model_id='ILI_104_60', model_type='mlp', num_workers=1, patience=5, pct_start=0.3, pred_len=60, random_seed=2021, root_path='./dataset/', seq_len=104, target='OT', test_flop=False, train_epochs=100, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.999, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : ILI_104_60_FTQNet_ILI_ftM_sl104_pl60_cycle4_fa0.999_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+ILI train: 512 windows, 64 batches, drop_last=True
+ILI val: 38 windows, 5 batches, drop_last=False
+Epoch 1 train=0.46229742 val=0.37055690
+Epoch 2 train=0.38015683 val=0.35953951
+Epoch 3 train=0.32662335 val=0.33043550
+Epoch 4 train=0.28542354 val=0.30054294
+Epoch 5 train=0.26489065 val=0.32126946
+Epoch 6 train=0.25240969 val=0.31669705
+Epoch 7 train=0.24683999 val=0.31761050
+Epoch 8 train=0.24379670 val=0.32035807
+Epoch 9 train=0.24257293 val=0.32083970
+Early stopping at epoch 9 (best epoch 4)
+Training complete: epochs=9 best_epoch=4 best_val=0.30054294
+>>>>>>>testing : ILI_104_60_FTQNet_ILI_ftM_sl104_pl60_cycle4_fa0.999_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ILI test: 135 windows, 17 batches, drop_last=False
+mse:1.618698169054295, mae:0.8110310287986647

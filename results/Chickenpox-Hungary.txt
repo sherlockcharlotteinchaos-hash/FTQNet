@@ -1,0 +1,276 @@
+Args in experiment:
+Namespace(batch_size=32, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=128, data='Chickenpox-Hungary', data_path='hungary_chickenpox.csv', des='fixed', devices='0', dropout=0.0, embed='timeF', enc_in=20, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='Chickenpox-Hungary_24_4_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=4, random_seed=42, root_path='./dataset/', seq_len=24, target='OT', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=0)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use GPU: cuda:0
+Chickenpox-Hungary | train | shape=(522, 20) | windows=439 | training_prefix=466 | fixed_test_origin=518 (2014-12-08) | training_output_H=4 | leading_gap_initializations=0 | original 522-week Hungary CSV
+>>>>>>>start training : Chickenpox-Hungary_24_4_fixed_FTQNet_Chickenpox-Hungary_ftM_sl24_pl4_cycle52_fa0.9_fc1.0_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Chickenpox-Hungary | val | shape=(522, 20) | windows=49 | training_prefix=466 | fixed_test_origin=518 (2014-12-08) | training_output_H=4 | leading_gap_initializations=0 | original 522-week Hungary CSV
+history/selection epoch=1/40 train_MASE=1.077060 validation_MASE=1.140421 best=1.140421
+history/selection epoch=2/40 train_MASE=1.025029 validation_MASE=1.043466 best=1.043466
+history/selection epoch=3/40 train_MASE=0.947039 validation_MASE=0.941078 best=0.941078
+history/selection epoch=4/40 train_MASE=0.886466 validation_MASE=0.894486 best=0.894486
+history/selection epoch=5/40 train_MASE=0.868313 validation_MASE=0.899113 best=0.894486
+history/selection epoch=6/40 train_MASE=0.848237 validation_MASE=0.884178 best=0.884178
+history/selection epoch=7/40 train_MASE=0.843726 validation_MASE=0.878325 best=0.878325
+history/selection epoch=8/40 train_MASE=0.835917 validation_MASE=0.876187 best=0.876187
+history/selection epoch=9/40 train_MASE=0.829208 validation_MASE=0.864632 best=0.864632
+history/selection epoch=10/40 train_MASE=0.824892 validation_MASE=0.870953 best=0.864632
+history/selection epoch=11/40 train_MASE=0.818726 validation_MASE=0.860098 best=0.860098
+history/selection epoch=12/40 train_MASE=0.817985 validation_MASE=0.860584 best=0.860098
+history/selection epoch=13/40 train_MASE=0.812448 validation_MASE=0.852546 best=0.852546
+history/selection epoch=14/40 train_MASE=0.811656 validation_MASE=0.853993 best=0.852546
+history/selection epoch=15/40 train_MASE=0.812290 validation_MASE=0.853698 best=0.852546
+history/selection epoch=16/40 train_MASE=0.806356 validation_MASE=0.853481 best=0.852546
+history/selection epoch=17/40 train_MASE=0.804110 validation_MASE=0.850540 best=0.850540
+history/selection epoch=18/40 train_MASE=0.803672 validation_MASE=0.857885 best=0.850540
+history/selection epoch=19/40 train_MASE=0.803813 validation_MASE=0.852230 best=0.850540
+history/selection epoch=20/40 train_MASE=0.800964 validation_MASE=0.852726 best=0.850540
+history/selection epoch=21/40 train_MASE=0.798400 validation_MASE=0.847211 best=0.847211
+history/selection epoch=22/40 train_MASE=0.799289 validation_MASE=0.857310 best=0.847211
+history/selection epoch=23/40 train_MASE=0.799468 validation_MASE=0.852014 best=0.847211
+history/selection epoch=24/40 train_MASE=0.794750 validation_MASE=0.852651 best=0.847211
+history/selection epoch=25/40 train_MASE=0.794405 validation_MASE=0.843707 best=0.843707
+history/selection epoch=26/40 train_MASE=0.792558 validation_MASE=0.852197 best=0.843707
+history/selection epoch=27/40 train_MASE=0.790049 validation_MASE=0.851251 best=0.843707
+history/selection epoch=28/40 train_MASE=0.790518 validation_MASE=0.847089 best=0.843707
+history/selection epoch=29/40 train_MASE=0.784282 validation_MASE=0.844320 best=0.843707
+history/selection epoch=30/40 train_MASE=0.789445 validation_MASE=0.843775 best=0.843707
+history/selection epoch=31/40 train_MASE=0.783261 validation_MASE=0.848383 best=0.843707
+history/selection epoch=32/40 train_MASE=0.781354 validation_MASE=0.844350 best=0.843707
+history/selection epoch=33/40 train_MASE=0.781183 validation_MASE=0.846062 best=0.843707
+history/selection epoch=34/40 train_MASE=0.780788 validation_MASE=0.847890 best=0.843707
+history/selection epoch=35/40 train_MASE=0.781885 validation_MASE=0.844059 best=0.843707
+recent/selection epoch=1/10 train_MASE=0.719246 validation_MASE=0.844327 best=0.844327
+recent/selection epoch=2/10 train_MASE=0.717711 validation_MASE=0.846517 best=0.844327
+recent/selection epoch=3/10 train_MASE=0.715125 validation_MASE=0.846246 best=0.844327
+recent/selection epoch=4/10 train_MASE=0.713040 validation_MASE=0.845274 best=0.844327
+recent/selection epoch=5/10 train_MASE=0.714373 validation_MASE=0.845064 best=0.844327
+recent/selection epoch=6/10 train_MASE=0.712252 validation_MASE=0.845587 best=0.844327
+recent/selection epoch=7/10 train_MASE=0.713871 validation_MASE=0.845875 best=0.844327
+recent/selection epoch=8/10 train_MASE=0.709738 validation_MASE=0.845841 best=0.844327
+recent/selection epoch=9/10 train_MASE=0.712126 validation_MASE=0.846072 best=0.844327
+recent/selection epoch=10/10 train_MASE=0.713109 validation_MASE=0.845869 best=0.844327
+Chickenpox-Hungary | train/refit | shape=(522, 20) | windows=491 | training_prefix=518 | fixed_test_origin=518 (2014-12-08) | training_output_H=4 | leading_gap_initializations=0 | original 522-week Hungary CSV
+history/refit epoch=1/25 train_MASE=1.088763
+history/refit epoch=2/25 train_MASE=1.033091
+history/refit epoch=3/25 train_MASE=0.930842
+history/refit epoch=4/25 train_MASE=0.884435
+history/refit epoch=5/25 train_MASE=0.861105
+history/refit epoch=6/25 train_MASE=0.847929
+history/refit epoch=7/25 train_MASE=0.839198
+history/refit epoch=8/25 train_MASE=0.833843
+history/refit epoch=9/25 train_MASE=0.827365
+history/refit epoch=10/25 train_MASE=0.825285
+history/refit epoch=11/25 train_MASE=0.821392
+history/refit epoch=12/25 train_MASE=0.815897
+history/refit epoch=13/25 train_MASE=0.813318
+history/refit epoch=14/25 train_MASE=0.813461
+history/refit epoch=15/25 train_MASE=0.809690
+history/refit epoch=16/25 train_MASE=0.807290
+history/refit epoch=17/25 train_MASE=0.804704
+history/refit epoch=18/25 train_MASE=0.806518
+history/refit epoch=19/25 train_MASE=0.806708
+history/refit epoch=20/25 train_MASE=0.802523
+history/refit epoch=21/25 train_MASE=0.801791
+history/refit epoch=22/25 train_MASE=0.797179
+history/refit epoch=23/25 train_MASE=0.798773
+history/refit epoch=24/25 train_MASE=0.796384
+history/refit epoch=25/25 train_MASE=0.795450
+Frozen selection={'history_epochs': 25, 'recent_epochs': 0, 'validation_mase': 0.8437074101767703} | mode=global_trend | train_end=518 | seconds=31.9
+>>>>>>>testing : Chickenpox-Hungary_24_4_fixed_FTQNet_Chickenpox-Hungary_ftM_sl24_pl4_cycle52_fa0.9_fc1.0_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Chickenpox-Hungary | test/refit | shape=(522, 20) | windows=1 | training_prefix=518 | fixed_test_origin=518 (2014-12-08) | training_output_H=4 | leading_gap_initializations=0 | original 522-week Hungary CSV
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2014-12-08 | windows=1 | H=4 | reported_targets=80/80 | selection={'history_epochs': 25, 'recent_epochs': 0, 'validation_mase': 0.8437074101767703}
+EpiCast raw metrics | MAE:20.7890111983, RMSE:26.3133658053, SMAPE:80.6523664793, MASE:1.0387864254
+mse:0.5522292004018174, mae:0.5313775864626202
+Args in experiment:
+Namespace(batch_size=32, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=128, data='Chickenpox-Hungary', data_path='hungary_chickenpox.csv', des='fixed', devices='0', dropout=0.0, embed='timeF', enc_in=20, features='M', flinear_alpha=0.99, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='Chickenpox-Hungary_24_8_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=8, random_seed=42, root_path='./dataset/', seq_len=24, target='OT', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=0)
+FLinear config | alpha: 0.99, c: 1.0, groups: 8
+Use GPU: cuda:0
+Chickenpox-Hungary | train | shape=(522, 20) | windows=431 | training_prefix=462 | fixed_test_origin=514 (2014-11-10) | training_output_H=8 | leading_gap_initializations=0 | original 522-week Hungary CSV
+>>>>>>>start training : Chickenpox-Hungary_24_8_fixed_FTQNet_Chickenpox-Hungary_ftM_sl24_pl8_cycle52_fa0.99_fc1.0_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Chickenpox-Hungary | val | shape=(522, 20) | windows=45 | training_prefix=462 | fixed_test_origin=514 (2014-11-10) | training_output_H=8 | leading_gap_initializations=0 | original 522-week Hungary CSV
+history/selection epoch=1/40 train_MASE=1.162986 validation_MASE=1.192938 best=1.192938
+history/selection epoch=2/40 train_MASE=1.107772 validation_MASE=1.118932 best=1.118932
+history/selection epoch=3/40 train_MASE=1.040225 validation_MASE=1.027437 best=1.027437
+history/selection epoch=4/40 train_MASE=0.994345 validation_MASE=0.996154 best=0.996154
+history/selection epoch=5/40 train_MASE=0.968060 validation_MASE=0.990909 best=0.990909
+history/selection epoch=6/40 train_MASE=0.956503 validation_MASE=0.993351 best=0.990909
+history/selection epoch=7/40 train_MASE=0.941835 validation_MASE=0.970030 best=0.970030
+history/selection epoch=8/40 train_MASE=0.929828 validation_MASE=0.974104 best=0.970030
+history/selection epoch=9/40 train_MASE=0.927116 validation_MASE=0.953700 best=0.953700
+history/selection epoch=10/40 train_MASE=0.918212 validation_MASE=0.947279 best=0.947279
+history/selection epoch=11/40 train_MASE=0.910749 validation_MASE=0.939848 best=0.939848
+history/selection epoch=12/40 train_MASE=0.906625 validation_MASE=0.935043 best=0.935043
+history/selection epoch=13/40 train_MASE=0.902864 validation_MASE=0.941446 best=0.935043
+history/selection epoch=14/40 train_MASE=0.898612 validation_MASE=0.939159 best=0.935043
+history/selection epoch=15/40 train_MASE=0.889498 validation_MASE=0.930441 best=0.930441
+history/selection epoch=16/40 train_MASE=0.887221 validation_MASE=0.939201 best=0.930441
+history/selection epoch=17/40 train_MASE=0.889604 validation_MASE=0.932646 best=0.930441
+history/selection epoch=18/40 train_MASE=0.886575 validation_MASE=0.928672 best=0.928672
+history/selection epoch=19/40 train_MASE=0.881531 validation_MASE=0.930193 best=0.928672
+history/selection epoch=20/40 train_MASE=0.881275 validation_MASE=0.932795 best=0.928672
+history/selection epoch=21/40 train_MASE=0.875985 validation_MASE=0.928063 best=0.928063
+history/selection epoch=22/40 train_MASE=0.875300 validation_MASE=0.920899 best=0.920899
+history/selection epoch=23/40 train_MASE=0.873535 validation_MASE=0.928671 best=0.920899
+history/selection epoch=24/40 train_MASE=0.873379 validation_MASE=0.925223 best=0.920899
+history/selection epoch=25/40 train_MASE=0.868396 validation_MASE=0.925137 best=0.920899
+history/selection epoch=26/40 train_MASE=0.870962 validation_MASE=0.924161 best=0.920899
+history/selection epoch=27/40 train_MASE=0.870063 validation_MASE=0.923820 best=0.920899
+history/selection epoch=28/40 train_MASE=0.865926 validation_MASE=0.920986 best=0.920899
+history/selection epoch=29/40 train_MASE=0.862604 validation_MASE=0.920588 best=0.920588
+history/selection epoch=30/40 train_MASE=0.862473 validation_MASE=0.928878 best=0.920588
+history/selection epoch=31/40 train_MASE=0.860692 validation_MASE=0.922669 best=0.920588
+history/selection epoch=32/40 train_MASE=0.860868 validation_MASE=0.918001 best=0.918001
+history/selection epoch=33/40 train_MASE=0.855606 validation_MASE=0.920330 best=0.918001
+history/selection epoch=34/40 train_MASE=0.856189 validation_MASE=0.926453 best=0.918001
+history/selection epoch=35/40 train_MASE=0.856371 validation_MASE=0.918636 best=0.918001
+history/selection epoch=36/40 train_MASE=0.853481 validation_MASE=0.922976 best=0.918001
+history/selection epoch=37/40 train_MASE=0.853719 validation_MASE=0.918440 best=0.918001
+history/selection epoch=38/40 train_MASE=0.854299 validation_MASE=0.920434 best=0.918001
+history/selection epoch=39/40 train_MASE=0.853613 validation_MASE=0.919234 best=0.918001
+history/selection epoch=40/40 train_MASE=0.854790 validation_MASE=0.919444 best=0.918001
+recent/selection epoch=1/10 train_MASE=0.791488 validation_MASE=0.917412 best=0.917412
+recent/selection epoch=2/10 train_MASE=0.786595 validation_MASE=0.916601 best=0.916601
+recent/selection epoch=3/10 train_MASE=0.786719 validation_MASE=0.916845 best=0.916601
+recent/selection epoch=4/10 train_MASE=0.785913 validation_MASE=0.917270 best=0.916601
+recent/selection epoch=5/10 train_MASE=0.783002 validation_MASE=0.918324 best=0.916601
+recent/selection epoch=6/10 train_MASE=0.784380 validation_MASE=0.918761 best=0.916601
+recent/selection epoch=7/10 train_MASE=0.782972 validation_MASE=0.918777 best=0.916601
+recent/selection epoch=8/10 train_MASE=0.779340 validation_MASE=0.918968 best=0.916601
+recent/selection epoch=9/10 train_MASE=0.781383 validation_MASE=0.918729 best=0.916601
+recent/selection epoch=10/10 train_MASE=0.780682 validation_MASE=0.918775 best=0.916601
+Chickenpox-Hungary | train/refit | shape=(522, 20) | windows=483 | training_prefix=514 | fixed_test_origin=514 (2014-11-10) | training_output_H=8 | leading_gap_initializations=0 | original 522-week Hungary CSV
+history/refit epoch=1/32 train_MASE=1.161729
+history/refit epoch=2/32 train_MASE=1.104652
+history/refit epoch=3/32 train_MASE=1.036041
+history/refit epoch=4/32 train_MASE=0.993545
+history/refit epoch=5/32 train_MASE=0.972466
+history/refit epoch=6/32 train_MASE=0.954457
+history/refit epoch=7/32 train_MASE=0.942281
+history/refit epoch=8/32 train_MASE=0.928354
+history/refit epoch=9/32 train_MASE=0.924737
+history/refit epoch=10/32 train_MASE=0.915678
+history/refit epoch=11/32 train_MASE=0.912078
+history/refit epoch=12/32 train_MASE=0.905997
+history/refit epoch=13/32 train_MASE=0.903344
+history/refit epoch=14/32 train_MASE=0.897495
+history/refit epoch=15/32 train_MASE=0.898787
+history/refit epoch=16/32 train_MASE=0.897368
+history/refit epoch=17/32 train_MASE=0.894835
+history/refit epoch=18/32 train_MASE=0.892799
+history/refit epoch=19/32 train_MASE=0.887186
+history/refit epoch=20/32 train_MASE=0.886078
+history/refit epoch=21/32 train_MASE=0.887331
+history/refit epoch=22/32 train_MASE=0.882471
+history/refit epoch=23/32 train_MASE=0.881618
+history/refit epoch=24/32 train_MASE=0.880765
+history/refit epoch=25/32 train_MASE=0.873429
+history/refit epoch=26/32 train_MASE=0.873006
+history/refit epoch=27/32 train_MASE=0.868859
+history/refit epoch=28/32 train_MASE=0.870540
+history/refit epoch=29/32 train_MASE=0.868801
+history/refit epoch=30/32 train_MASE=0.869895
+history/refit epoch=31/32 train_MASE=0.873319
+history/refit epoch=32/32 train_MASE=0.863421
+recent/refit epoch=1/2 train_MASE=0.814505
+recent/refit epoch=2/2 train_MASE=0.809991
+Frozen selection={'history_epochs': 32, 'recent_epochs': 2, 'validation_mase': 0.9166005394069083} | mode=global_last | train_end=514 | seconds=37.4
+>>>>>>>testing : Chickenpox-Hungary_24_8_fixed_FTQNet_Chickenpox-Hungary_ftM_sl24_pl8_cycle52_fa0.99_fc1.0_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Chickenpox-Hungary | test/refit | shape=(522, 20) | windows=1 | training_prefix=514 | fixed_test_origin=514 (2014-11-10) | training_output_H=8 | leading_gap_initializations=0 | original 522-week Hungary CSV
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2014-11-10 | windows=1 | H=8 | reported_targets=160/160 | selection={'history_epochs': 32, 'recent_epochs': 2, 'validation_mase': 0.9166005394069083}
+EpiCast raw metrics | MAE:16.3432023522, RMSE:22.4482515119, SMAPE:77.6120009757, MASE:0.8215520756
+mse:0.3981220217019768, mae:0.42245435444857565
+Args in experiment:
+Namespace(batch_size=32, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=128, data='Chickenpox-Hungary', data_path='hungary_chickenpox.csv', des='fixed', devices='0', dropout=0.0, embed='timeF', enc_in=20, features='M', flinear_alpha=0.99, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='Chickenpox-Hungary_24_12_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=12, random_seed=42, root_path='./dataset/', seq_len=24, target='OT', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=0)
+FLinear config | alpha: 0.99, c: 1.0, groups: 8
+Use GPU: cuda:0
+Chickenpox-Hungary | train | shape=(522, 20) | windows=424 | training_prefix=459 | fixed_test_origin=510 (2014-10-13) | training_output_H=12 | leading_gap_initializations=0 | original 522-week Hungary CSV
+>>>>>>>start training : Chickenpox-Hungary_24_12_fixed_FTQNet_Chickenpox-Hungary_ftM_sl24_pl12_cycle52_fa0.99_fc1.0_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Chickenpox-Hungary | val | shape=(522, 20) | windows=40 | training_prefix=459 | fixed_test_origin=510 (2014-10-13) | training_output_H=12 | leading_gap_initializations=0 | original 522-week Hungary CSV
+history/selection epoch=1/40 train_MASE=1.321469 validation_MASE=1.377059 best=1.377059
+history/selection epoch=2/40 train_MASE=1.255637 validation_MASE=1.310074 best=1.310074
+history/selection epoch=3/40 train_MASE=1.186129 validation_MASE=1.195398 best=1.195398
+history/selection epoch=4/40 train_MASE=1.106060 validation_MASE=1.150507 best=1.150507
+history/selection epoch=5/40 train_MASE=1.068455 validation_MASE=1.116075 best=1.116075
+history/selection epoch=6/40 train_MASE=1.042153 validation_MASE=1.108303 best=1.108303
+history/selection epoch=7/40 train_MASE=1.025159 validation_MASE=1.089830 best=1.089830
+history/selection epoch=8/40 train_MASE=1.011777 validation_MASE=1.093088 best=1.089830
+history/selection epoch=9/40 train_MASE=1.001790 validation_MASE=1.085127 best=1.085127
+history/selection epoch=10/40 train_MASE=0.998645 validation_MASE=1.068436 best=1.068436
+history/selection epoch=11/40 train_MASE=0.979461 validation_MASE=1.051655 best=1.051655
+history/selection epoch=12/40 train_MASE=0.985825 validation_MASE=1.054670 best=1.051655
+history/selection epoch=13/40 train_MASE=0.975765 validation_MASE=1.071900 best=1.051655
+history/selection epoch=14/40 train_MASE=0.971208 validation_MASE=1.050821 best=1.050821
+history/selection epoch=15/40 train_MASE=0.961198 validation_MASE=1.050948 best=1.050821
+history/selection epoch=16/40 train_MASE=0.961228 validation_MASE=1.050207 best=1.050207
+history/selection epoch=17/40 train_MASE=0.958541 validation_MASE=1.051562 best=1.050207
+history/selection epoch=18/40 train_MASE=0.958177 validation_MASE=1.043877 best=1.043877
+history/selection epoch=19/40 train_MASE=0.949852 validation_MASE=1.044167 best=1.043877
+history/selection epoch=20/40 train_MASE=0.943666 validation_MASE=1.062400 best=1.043877
+history/selection epoch=21/40 train_MASE=0.949575 validation_MASE=1.053612 best=1.043877
+history/selection epoch=22/40 train_MASE=0.942311 validation_MASE=1.042672 best=1.042672
+history/selection epoch=23/40 train_MASE=0.937732 validation_MASE=1.040931 best=1.040931
+history/selection epoch=24/40 train_MASE=0.936687 validation_MASE=1.043598 best=1.040931
+history/selection epoch=25/40 train_MASE=0.933775 validation_MASE=1.035484 best=1.035484
+history/selection epoch=26/40 train_MASE=0.935473 validation_MASE=1.034520 best=1.034520
+history/selection epoch=27/40 train_MASE=0.933278 validation_MASE=1.053871 best=1.034520
+history/selection epoch=28/40 train_MASE=0.931711 validation_MASE=1.041661 best=1.034520
+history/selection epoch=29/40 train_MASE=0.926749 validation_MASE=1.035123 best=1.034520
+history/selection epoch=30/40 train_MASE=0.928424 validation_MASE=1.032011 best=1.032011
+history/selection epoch=31/40 train_MASE=0.926898 validation_MASE=1.043145 best=1.032011
+history/selection epoch=32/40 train_MASE=0.921487 validation_MASE=1.036233 best=1.032011
+history/selection epoch=33/40 train_MASE=0.925411 validation_MASE=1.037221 best=1.032011
+history/selection epoch=34/40 train_MASE=0.924014 validation_MASE=1.043030 best=1.032011
+history/selection epoch=35/40 train_MASE=0.919199 validation_MASE=1.046301 best=1.032011
+history/selection epoch=36/40 train_MASE=0.920275 validation_MASE=1.037385 best=1.032011
+history/selection epoch=37/40 train_MASE=0.913431 validation_MASE=1.035217 best=1.032011
+history/selection epoch=38/40 train_MASE=0.915381 validation_MASE=1.044659 best=1.032011
+history/selection epoch=39/40 train_MASE=0.916187 validation_MASE=1.056178 best=1.032011
+history/selection epoch=40/40 train_MASE=0.912865 validation_MASE=1.035793 best=1.032011
+recent/selection epoch=1/10 train_MASE=0.866474 validation_MASE=1.033165 best=1.033165
+recent/selection epoch=2/10 train_MASE=0.863014 validation_MASE=1.035715 best=1.033165
+recent/selection epoch=3/10 train_MASE=0.854238 validation_MASE=1.037734 best=1.033165
+recent/selection epoch=4/10 train_MASE=0.854080 validation_MASE=1.039440 best=1.033165
+recent/selection epoch=5/10 train_MASE=0.850397 validation_MASE=1.040871 best=1.033165
+recent/selection epoch=6/10 train_MASE=0.845676 validation_MASE=1.040504 best=1.033165
+recent/selection epoch=7/10 train_MASE=0.848359 validation_MASE=1.039508 best=1.033165
+recent/selection epoch=8/10 train_MASE=0.849650 validation_MASE=1.038252 best=1.033165
+recent/selection epoch=9/10 train_MASE=0.842234 validation_MASE=1.038499 best=1.033165
+recent/selection epoch=10/10 train_MASE=0.846530 validation_MASE=1.039350 best=1.033165
+Chickenpox-Hungary | train/refit | shape=(522, 20) | windows=475 | training_prefix=510 | fixed_test_origin=510 (2014-10-13) | training_output_H=12 | leading_gap_initializations=0 | original 522-week Hungary CSV
+history/refit epoch=1/30 train_MASE=1.303674
+history/refit epoch=2/30 train_MASE=1.231669
+history/refit epoch=3/30 train_MASE=1.150488
+history/refit epoch=4/30 train_MASE=1.098936
+history/refit epoch=5/30 train_MASE=1.055134
+history/refit epoch=6/30 train_MASE=1.036237
+history/refit epoch=7/30 train_MASE=1.014900
+history/refit epoch=8/30 train_MASE=1.004118
+history/refit epoch=9/30 train_MASE=1.000829
+history/refit epoch=10/30 train_MASE=0.994012
+history/refit epoch=11/30 train_MASE=0.984157
+history/refit epoch=12/30 train_MASE=0.972372
+history/refit epoch=13/30 train_MASE=0.968649
+history/refit epoch=14/30 train_MASE=0.965487
+history/refit epoch=15/30 train_MASE=0.963309
+history/refit epoch=16/30 train_MASE=0.957701
+history/refit epoch=17/30 train_MASE=0.952192
+history/refit epoch=18/30 train_MASE=0.950670
+history/refit epoch=19/30 train_MASE=0.948578
+history/refit epoch=20/30 train_MASE=0.943874
+history/refit epoch=21/30 train_MASE=0.944983
+history/refit epoch=22/30 train_MASE=0.940122
+history/refit epoch=23/30 train_MASE=0.938466
+history/refit epoch=24/30 train_MASE=0.939101
+history/refit epoch=25/30 train_MASE=0.940143
+history/refit epoch=26/30 train_MASE=0.932175
+history/refit epoch=27/30 train_MASE=0.932007
+history/refit epoch=28/30 train_MASE=0.926414
+history/refit epoch=29/30 train_MASE=0.927580
+history/refit epoch=30/30 train_MASE=0.927739
+Frozen selection={'history_epochs': 30, 'recent_epochs': 0, 'validation_mase': 1.0320112539334425} | mode=global_last | train_end=510 | seconds=35.6
+>>>>>>>testing : Chickenpox-Hungary_24_12_fixed_FTQNet_Chickenpox-Hungary_ftM_sl24_pl12_cycle52_fa0.99_fc1.0_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Chickenpox-Hungary | test/refit | shape=(522, 20) | windows=1 | training_prefix=510 | fixed_test_origin=510 (2014-10-13) | training_output_H=12 | leading_gap_initializations=0 | original 522-week Hungary CSV
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2014-10-13 | windows=1 | H=12 | reported_targets=240/240 | selection={'history_epochs': 30, 'recent_epochs': 0, 'validation_mase': 1.0320112539334425}
+EpiCast raw metrics | MAE:12.9523663580, RMSE:19.1141760825, SMAPE:83.9752102087, MASE:0.6626416544
+mse:0.28520612367859327, mae:0.34002041939728306

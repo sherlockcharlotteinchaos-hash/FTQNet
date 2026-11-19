@@ -1,0 +1,133 @@
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Influenza-US-2', data_path='Influenza US 2.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=10, features='M', flinear_alpha=0.99, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='Influenza-US-2_24_4_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=4, random_seed=42, root_path='./dataset/', seq_len=24, target='ILITOTAL', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=0)
+FLinear config | alpha: 0.99, c: 1.0, groups: 8
+Use GPU: cuda:0
+Influenza-US-2 | train | shape=(1200, 10) | windows=927 | training_prefix=1184 | fixed_test_origin=1196 (2020-08-30) | training_output_H=4 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+>>>>>>>start training : Influenza-US-2_24_4_fixed_FTQNet_Influenza-US-2_ftM_sl24_pl4_cycle52_fa0.99_fc1.0_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Influenza-US-2 | val | shape=(1200, 10) | windows=9 | training_prefix=1184 | fixed_test_origin=1196 (2020-08-30) | training_output_H=4 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+history/selection epoch=1/40 train_MASE=3.015384 validation_MASE=2.082197 best=2.082197
+history/selection epoch=2/40 train_MASE=2.823425 validation_MASE=2.194394 best=2.082197
+history/selection epoch=3/40 train_MASE=2.636230 validation_MASE=2.289800 best=2.082197
+history/selection epoch=4/40 train_MASE=2.483717 validation_MASE=2.282990 best=2.082197
+history/selection epoch=5/40 train_MASE=2.348978 validation_MASE=2.212739 best=2.082197
+history/selection epoch=6/40 train_MASE=2.277191 validation_MASE=2.213012 best=2.082197
+history/selection epoch=7/40 train_MASE=2.244118 validation_MASE=2.249921 best=2.082197
+history/selection epoch=8/40 train_MASE=2.170036 validation_MASE=2.280040 best=2.082197
+history/selection epoch=9/40 train_MASE=2.106854 validation_MASE=2.300050 best=2.082197
+history/selection epoch=10/40 train_MASE=2.064898 validation_MASE=2.310423 best=2.082197
+history/selection epoch=11/40 train_MASE=2.013644 validation_MASE=2.368248 best=2.082197
+recent/selection epoch=1/10 train_MASE=7.696343 validation_MASE=2.086536 best=2.086536
+recent/selection epoch=2/10 train_MASE=7.653469 validation_MASE=2.090624 best=2.086536
+recent/selection epoch=3/10 train_MASE=7.622057 validation_MASE=2.095152 best=2.086536
+recent/selection epoch=4/10 train_MASE=7.583936 validation_MASE=2.099582 best=2.086536
+recent/selection epoch=5/10 train_MASE=7.540722 validation_MASE=2.104839 best=2.086536
+recent/selection epoch=6/10 train_MASE=7.526246 validation_MASE=2.110441 best=2.086536
+recent/selection epoch=7/10 train_MASE=7.498786 validation_MASE=2.115677 best=2.086536
+recent/selection epoch=8/10 train_MASE=7.482656 validation_MASE=2.120780 best=2.086536
+recent/selection epoch=9/10 train_MASE=7.442138 validation_MASE=2.126588 best=2.086536
+recent/selection epoch=10/10 train_MASE=7.389045 validation_MASE=2.133064 best=2.086536
+Influenza-US-2 | train/refit | shape=(1200, 10) | windows=939 | training_prefix=1196 | fixed_test_origin=1196 (2020-08-30) | training_output_H=4 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+history/refit epoch=1/1 train_MASE=3.015443
+Frozen selection={'history_epochs': 1, 'recent_epochs': 0, 'validation_mase': 2.082197369773551} | mode=log_relative | train_end=1196 | seconds=5.4
+>>>>>>>testing : Influenza-US-2_24_4_fixed_FTQNet_Influenza-US-2_ftM_sl24_pl4_cycle52_fa0.99_fc1.0_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Influenza-US-2 | test/refit | shape=(1200, 10) | windows=1 | training_prefix=1196 | fixed_test_origin=1196 (2020-08-30) | training_output_H=4 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2020-08-30 | windows=1 | H=4 | reported_targets=40/40 | selection={'history_epochs': 1, 'recent_epochs': 0, 'validation_mase': 2.082197369773551}
+EpiCast raw metrics | MAE:144.4988876343, RMSE:166.0051705738, SMAPE:15.8004863977, MASE:1.2044783539
+mse:0.038508465449914694, mae:0.1339829050257499
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Influenza-US-2', data_path='Influenza US 2.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=10, features='M', flinear_alpha=0.99, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.001, loss='mae', lradj='constant', model='FTQNet', model_id='Influenza-US-2_24_8_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=8, random_seed=42, root_path='./dataset/', seq_len=24, target='ILITOTAL', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.99, c: 1.0, groups: 8
+Use GPU: cuda:0
+Influenza-US-2 | train | shape=(1200, 10) | windows=895 | training_prefix=1176 | fixed_test_origin=1192 (2020-08-02) | training_output_H=8 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+>>>>>>>start training : Influenza-US-2_24_8_fixed_FTQNet_Influenza-US-2_ftM_sl24_pl8_cycle52_fa0.99_fc1.0_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Influenza-US-2 | val | shape=(1200, 10) | windows=9 | training_prefix=1176 | fixed_test_origin=1192 (2020-08-02) | training_output_H=8 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+history/selection epoch=1/40 train_MASE=3.638151 validation_MASE=3.763338 best=3.763338
+history/selection epoch=2/40 train_MASE=3.581731 validation_MASE=3.193643 best=3.193643
+history/selection epoch=3/40 train_MASE=3.544033 validation_MASE=2.802531 best=2.802531
+history/selection epoch=4/40 train_MASE=3.512324 validation_MASE=2.818280 best=2.802531
+history/selection epoch=5/40 train_MASE=3.481693 validation_MASE=2.752648 best=2.752648
+history/selection epoch=6/40 train_MASE=3.440056 validation_MASE=2.905836 best=2.752648
+history/selection epoch=7/40 train_MASE=3.392039 validation_MASE=2.897968 best=2.752648
+history/selection epoch=8/40 train_MASE=3.335922 validation_MASE=2.781839 best=2.752648
+history/selection epoch=9/40 train_MASE=3.264332 validation_MASE=2.869947 best=2.752648
+history/selection epoch=10/40 train_MASE=3.179905 validation_MASE=2.838023 best=2.752648
+history/selection epoch=11/40 train_MASE=3.135914 validation_MASE=3.255557 best=2.752648
+history/selection epoch=12/40 train_MASE=3.098223 validation_MASE=3.180435 best=2.752648
+history/selection epoch=13/40 train_MASE=3.078023 validation_MASE=3.415403 best=2.752648
+history/selection epoch=14/40 train_MASE=3.048000 validation_MASE=3.598116 best=2.752648
+history/selection epoch=15/40 train_MASE=3.021317 validation_MASE=3.806546 best=2.752648
+recent/selection epoch=1/10 train_MASE=4.301637 validation_MASE=2.820360 best=2.820360
+recent/selection epoch=2/10 train_MASE=4.292859 validation_MASE=2.892587 best=2.820360
+recent/selection epoch=3/10 train_MASE=4.281612 validation_MASE=2.967558 best=2.820360
+recent/selection epoch=4/10 train_MASE=4.273763 validation_MASE=3.043525 best=2.820360
+recent/selection epoch=5/10 train_MASE=4.267607 validation_MASE=3.119151 best=2.820360
+recent/selection epoch=6/10 train_MASE=4.260684 validation_MASE=3.192676 best=2.820360
+recent/selection epoch=7/10 train_MASE=4.252084 validation_MASE=3.260520 best=2.820360
+recent/selection epoch=8/10 train_MASE=4.250604 validation_MASE=3.323751 best=2.820360
+recent/selection epoch=9/10 train_MASE=4.250244 validation_MASE=3.382822 best=2.820360
+recent/selection epoch=10/10 train_MASE=4.240053 validation_MASE=3.433694 best=2.820360
+Influenza-US-2 | train/refit | shape=(1200, 10) | windows=911 | training_prefix=1192 | fixed_test_origin=1192 (2020-08-02) | training_output_H=8 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+history/refit epoch=1/5 train_MASE=3.620651
+history/refit epoch=2/5 train_MASE=3.558510
+history/refit epoch=3/5 train_MASE=3.521867
+history/refit epoch=4/5 train_MASE=3.492075
+history/refit epoch=5/5 train_MASE=3.455222
+Frozen selection={'history_epochs': 5, 'recent_epochs': 0, 'validation_mase': 2.7526482302643815} | mode=global_trend | train_end=1192 | seconds=7.2
+>>>>>>>testing : Influenza-US-2_24_8_fixed_FTQNet_Influenza-US-2_ftM_sl24_pl8_cycle52_fa0.99_fc1.0_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Influenza-US-2 | test/refit | shape=(1200, 10) | windows=1 | training_prefix=1192 | fixed_test_origin=1192 (2020-08-02) | training_output_H=8 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2020-08-02 | windows=1 | H=8 | reported_targets=80/80 | selection={'history_epochs': 5, 'recent_epochs': 0, 'validation_mase': 2.7526482302643815}
+EpiCast raw metrics | MAE:246.8819580078, RMSE:279.8991144050, SMAPE:19.8932004448, MASE:1.5348212842
+mse:0.06367402683524245, mae:0.17284886863816623
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Influenza-US-2', data_path='Influenza US 2.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=10, features='M', flinear_alpha=1.0, flinear_c=0.5, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.0007, loss='mae', lradj='constant', model='FTQNet', model_id='Influenza-US-2_24_12_fixed', model_type='mlp', num_workers=0, patience=7, pct_start=0.3, pred_len=12, random_seed=42, root_path='./dataset/', seq_len=24, target='ILITOTAL', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 1.0, c: 0.5, groups: 8
+Use GPU: cuda:0
+Influenza-US-2 | train | shape=(1200, 10) | windows=868 | training_prefix=1164 | fixed_test_origin=1188 (2020-07-05) | training_output_H=12 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+>>>>>>>start training : Influenza-US-2_24_12_fixed_FTQNet_Influenza-US-2_ftM_sl24_pl12_cycle52_fa1.0_fc0.5_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Influenza-US-2 | val | shape=(1200, 10) | windows=13 | training_prefix=1164 | fixed_test_origin=1188 (2020-07-05) | training_output_H=12 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+history/selection epoch=1/40 train_MASE=4.943206 validation_MASE=23.634832 best=23.634832
+history/selection epoch=2/40 train_MASE=4.697967 validation_MASE=20.919658 best=20.919658
+history/selection epoch=3/40 train_MASE=4.432471 validation_MASE=17.465687 best=17.465687
+history/selection epoch=4/40 train_MASE=4.194857 validation_MASE=14.863286 best=14.863286
+history/selection epoch=5/40 train_MASE=3.987363 validation_MASE=13.625507 best=13.625507
+history/selection epoch=6/40 train_MASE=3.858013 validation_MASE=13.246742 best=13.246742
+history/selection epoch=7/40 train_MASE=3.766716 validation_MASE=13.759700 best=13.246742
+history/selection epoch=8/40 train_MASE=3.691794 validation_MASE=14.116512 best=13.246742
+history/selection epoch=9/40 train_MASE=3.605374 validation_MASE=13.717143 best=13.246742
+history/selection epoch=10/40 train_MASE=3.514664 validation_MASE=14.607959 best=13.246742
+history/selection epoch=11/40 train_MASE=3.422994 validation_MASE=14.236917 best=13.246742
+history/selection epoch=12/40 train_MASE=3.346027 validation_MASE=14.652677 best=13.246742
+history/selection epoch=13/40 train_MASE=3.312967 validation_MASE=14.392864 best=13.246742
+recent/selection epoch=1/10 train_MASE=7.086175 validation_MASE=13.192739 best=13.192739
+recent/selection epoch=2/10 train_MASE=7.063979 validation_MASE=13.142663 best=13.142663
+recent/selection epoch=3/10 train_MASE=7.016256 validation_MASE=13.095212 best=13.095212
+recent/selection epoch=4/10 train_MASE=6.956723 validation_MASE=13.056821 best=13.056821
+recent/selection epoch=5/10 train_MASE=6.917036 validation_MASE=13.024048 best=13.024048
+recent/selection epoch=6/10 train_MASE=6.889532 validation_MASE=12.995591 best=12.995591
+recent/selection epoch=7/10 train_MASE=6.846083 validation_MASE=12.973365 best=12.973365
+recent/selection epoch=8/10 train_MASE=6.810366 validation_MASE=12.955111 best=12.955111
+recent/selection epoch=9/10 train_MASE=6.797506 validation_MASE=12.944188 best=12.944188
+recent/selection epoch=10/10 train_MASE=6.772423 validation_MASE=12.937617 best=12.937617
+Influenza-US-2 | train/refit | shape=(1200, 10) | windows=892 | training_prefix=1188 | fixed_test_origin=1188 (2020-07-05) | training_output_H=12 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+history/refit epoch=1/6 train_MASE=5.151488
+history/refit epoch=2/6 train_MASE=4.887696
+history/refit epoch=3/6 train_MASE=4.598897
+history/refit epoch=4/6 train_MASE=4.382518
+history/refit epoch=5/6 train_MASE=4.168246
+history/refit epoch=6/6 train_MASE=4.007493
+recent/refit epoch=1/10 train_MASE=8.705121
+recent/refit epoch=2/10 train_MASE=8.674047
+recent/refit epoch=3/10 train_MASE=8.627742
+recent/refit epoch=4/10 train_MASE=8.583197
+recent/refit epoch=5/10 train_MASE=8.534528
+recent/refit epoch=6/10 train_MASE=8.514524
+recent/refit epoch=7/10 train_MASE=8.502510
+recent/refit epoch=8/10 train_MASE=8.429484
+recent/refit epoch=9/10 train_MASE=8.384753
+recent/refit epoch=10/10 train_MASE=8.363614
+Frozen selection={'history_epochs': 6, 'recent_epochs': 10, 'validation_mase': 12.93761689145678} | mode=log_relative | train_end=1188 | seconds=4.8
+>>>>>>>testing : Influenza-US-2_24_12_fixed_FTQNet_Influenza-US-2_ftM_sl24_pl12_cycle52_fa1.0_fc0.5_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Influenza-US-2 | test/refit | shape=(1200, 10) | windows=1 | training_prefix=1188 | fixed_test_origin=1188 (2020-07-05) | training_output_H=12 | leading_gap_initializations=0 | CDC HHS ILITOTAL original counts; weeks with zero providers and zero patients are excluded from TRAINING windows only
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2020-07-05 | windows=1 | H=12 | reported_targets=120/120 | selection={'history_epochs': 6, 'recent_epochs': 10, 'validation_mase': 12.93761689145678}
+EpiCast raw metrics | MAE:435.2743751526, RMSE:484.2852749416, SMAPE:29.4900609801, MASE:2.2799134911
+mse:0.1211134337795683, mae:0.24856821255474168

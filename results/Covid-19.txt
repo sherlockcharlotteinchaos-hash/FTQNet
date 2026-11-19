@@ -1,0 +1,121 @@
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=True, cycle=4, d_model=512, data='Covid-19', data_path='Covid-19.csv', des='test', devices='0,1', dropout=0.1, embed='timeF', enc_in=948, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='d', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.0005, loss='mae', lradj='type1', model='FTQNet', model_id='Covid-19_36_24', model_type='mlp', num_workers=1, patience=5, pct_start=0.3, pred_len=24, random_seed=2021, root_path='./dataset/', seq_len=36, target='OT', test_flop=False, train_epochs=100, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : Covid-19_36_24_FTQNet_Covid-19_ftM_sl36_pl24_cycle4_fa0.9_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+Covid-19 train: 914 windows, 114 batches, drop_last=True
+Covid-19 val: 117 windows, 15 batches, drop_last=False
+Epoch 1 train=0.17387680 val=0.54036129
+Epoch 2 train=0.15148949 val=0.51192719
+Epoch 3 train=0.14742709 val=0.50660874
+Epoch 4 train=0.14581735 val=0.50112852
+Epoch 5 train=0.14480934 val=0.49913137
+Epoch 6 train=0.14449495 val=0.50023507
+Epoch 7 train=0.14409848 val=0.50010758
+Epoch 8 train=0.14395305 val=0.49934471
+Epoch 9 train=0.14391157 val=0.49894778
+Epoch 10 train=0.14365985 val=0.49986069
+Epoch 11 train=0.14406895 val=0.49826628
+Epoch 12 train=0.14393190 val=0.49513718
+Epoch 13 train=0.14389666 val=0.49170556
+Epoch 14 train=0.14410968 val=0.49640865
+Epoch 15 train=0.14402468 val=0.49800787
+Epoch 16 train=0.14406938 val=0.49732230
+Epoch 17 train=0.14355308 val=0.49656940
+Epoch 18 train=0.14400449 val=0.49819319
+Early stopping at epoch 18 (best epoch 13)
+Training complete: epochs=18 best_epoch=13 best_val=0.49170556
+>>>>>>>fitting COVID calibration on validation: Covid-19_36_24_FTQNet_Covid-19_ftM_sl36_pl24_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<
+Covid-19 val: 117 windows, 15 batches, drop_last=False
+COVID-19 calibration: completed (H=24)
+>>>>>>>testing : Covid-19_36_24_FTQNet_Covid-19_ftM_sl36_pl24_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Covid-19 test: 256 windows, 32 batches, drop_last=False
+COVID-19 uncalibrated mse:0.956513524, mae:0.032966304
+mse:0.8573211303601043, mae:0.027408352051631238
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=True, cycle=4, d_model=512, data='Covid-19', data_path='Covid-19.csv', des='test', devices='0,1', dropout=0.1, embed='timeF', enc_in=948, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='d', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.0005, loss='mae', lradj='type1', model='FTQNet', model_id='Covid-19_36_36', model_type='mlp', num_workers=1, patience=5, pct_start=0.3, pred_len=36, random_seed=2021, root_path='./dataset/', seq_len=36, target='OT', test_flop=False, train_epochs=100, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : Covid-19_36_36_FTQNet_Covid-19_ftM_sl36_pl36_cycle4_fa0.9_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+Covid-19 train: 902 windows, 112 batches, drop_last=True
+Covid-19 val: 105 windows, 14 batches, drop_last=False
+Epoch 1 train=0.20470385 val=0.66233229
+Epoch 2 train=0.17694234 val=0.62590063
+Epoch 3 train=0.17182894 val=0.64450986
+Epoch 4 train=0.16996099 val=0.61335169
+Epoch 5 train=0.16905947 val=0.63192806
+Epoch 6 train=0.16863365 val=0.60772460
+Epoch 7 train=0.16833693 val=0.61052915
+Epoch 8 train=0.16857986 val=0.60208263
+Epoch 9 train=0.16852548 val=0.60538034
+Epoch 10 train=0.16866442 val=0.62302041
+Epoch 11 train=0.16789449 val=0.63367090
+Epoch 12 train=0.16865553 val=0.60769243
+Epoch 13 train=0.16816711 val=0.63200014
+Early stopping at epoch 13 (best epoch 8)
+Training complete: epochs=13 best_epoch=8 best_val=0.60208263
+>>>>>>>fitting COVID calibration on validation: Covid-19_36_36_FTQNet_Covid-19_ftM_sl36_pl36_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<
+Covid-19 val: 105 windows, 14 batches, drop_last=False
+COVID-19 calibration: completed (H=36)
+>>>>>>>testing : Covid-19_36_36_FTQNet_Covid-19_ftM_sl36_pl36_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Covid-19 test: 244 windows, 31 batches, drop_last=False
+COVID-19 uncalibrated mse:1.270539022, mae:0.039872067
+mse:1.1114768691826284, mae:0.03327131175034922
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=True, cycle=4, d_model=512, data='Covid-19', data_path='Covid-19.csv', des='test', devices='0,1', dropout=0.0, embed='timeF', enc_in=948, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='d', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.01, loss='mae', lradj='type1', model='FTQNet', model_id='Covid-19_36_48', model_type='mlp', num_workers=1, patience=5, pct_start=0.3, pred_len=48, random_seed=2021, root_path='./dataset/', seq_len=36, target='OT', test_flop=False, train_epochs=100, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : Covid-19_36_48_FTQNet_Covid-19_ftM_sl36_pl48_cycle4_fa0.9_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+Covid-19 train: 890 windows, 111 batches, drop_last=True
+Covid-19 val: 93 windows, 12 batches, drop_last=False
+Epoch 1 train=0.21152837 val=0.76787211
+Epoch 2 train=0.19562279 val=0.80992708
+Epoch 3 train=0.18401198 val=0.76317697
+Epoch 4 train=0.17694860 val=0.71118709
+Epoch 5 train=0.17366650 val=0.68906607
+Epoch 6 train=0.17232771 val=0.69329806
+Epoch 7 train=0.17119485 val=0.69775818
+Epoch 8 train=0.17095073 val=0.69813588
+Epoch 9 train=0.17115790 val=0.69014839
+Epoch 10 train=0.17099983 val=0.69470954
+Early stopping at epoch 10 (best epoch 5)
+Training complete: epochs=10 best_epoch=5 best_val=0.68906607
+>>>>>>>fitting COVID calibration on validation: Covid-19_36_48_FTQNet_Covid-19_ftM_sl36_pl48_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<
+Covid-19 val: 93 windows, 12 batches, drop_last=False
+COVID-19 calibration: completed (H=48)
+>>>>>>>testing : Covid-19_36_48_FTQNet_Covid-19_ftM_sl36_pl48_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Covid-19 test: 232 windows, 29 batches, drop_last=False
+COVID-19 uncalibrated mse:1.495296854, mae:0.042880930
+mse:1.4511122483706238, mae:0.0396159511202362
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=True, cycle=4, d_model=512, data='Covid-19', data_path='Covid-19.csv', des='test', devices='0,1', dropout=0.1, embed='timeF', enc_in=948, features='M', flinear_alpha=0.95, flinear_c=1.0, flinear_groups=8, freq='d', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.01, loss='mae', lradj='type1', model='FTQNet', model_id='Covid-19_36_60', model_type='mlp', num_workers=1, patience=5, pct_start=0.3, pred_len=60, random_seed=2021, root_path='./dataset/', seq_len=36, target='OT', test_flop=False, train_epochs=100, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.95, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : Covid-19_36_60_FTQNet_Covid-19_ftM_sl36_pl60_cycle4_fa0.95_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+Covid-19 train: 878 windows, 109 batches, drop_last=True
+Covid-19 val: 81 windows, 11 batches, drop_last=False
+Epoch 1 train=0.24114789 val=1.07815122
+Epoch 2 train=0.22051228 val=0.98599612
+Epoch 3 train=0.20772948 val=0.96231655
+Epoch 4 train=0.20013876 val=0.96765506
+Epoch 5 train=0.19720043 val=0.91506740
+Epoch 6 train=0.19653820 val=0.92000602
+Epoch 7 train=0.19537425 val=0.93074824
+Epoch 8 train=0.19494940 val=0.88828899
+Epoch 9 train=0.19482747 val=0.92185748
+Epoch 10 train=0.19520246 val=0.91929814
+Epoch 11 train=0.19474932 val=0.88169398
+Epoch 12 train=0.19457684 val=0.88498067
+Epoch 13 train=0.19473982 val=0.88973715
+Epoch 14 train=0.19483459 val=0.89779568
+Epoch 15 train=0.19450734 val=0.91116511
+Epoch 16 train=0.19517062 val=0.88759911
+Early stopping at epoch 16 (best epoch 11)
+Training complete: epochs=16 best_epoch=11 best_val=0.88169398
+>>>>>>>fitting COVID calibration on validation: Covid-19_36_60_FTQNet_Covid-19_ftM_sl36_pl60_cycle4_fa0.95_fc1.0_fg8_seed2021<<<<<<<<
+Covid-19 val: 81 windows, 11 batches, drop_last=False
+COVID-19 calibration: completed (H=60)
+>>>>>>>testing : Covid-19_36_60_FTQNet_Covid-19_ftM_sl36_pl60_cycle4_fa0.95_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Covid-19 test: 220 windows, 28 batches, drop_last=False
+COVID-19 uncalibrated mse:1.950955265, mae:0.051507771
+mse:1.928150223930904, mae:0.048918657685043165

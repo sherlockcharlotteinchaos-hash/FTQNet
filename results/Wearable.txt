@@ -1,0 +1,80 @@
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=4, d_model=64, data='Wearable', data_path='wearable.csv', des='test', devices='0,1', dropout=0.242352, embed='timeF', enc_in=19, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='5min', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.009135185, loss='mse', lradj='type1', model='FTQNet', model_id='Wearable_576_12', model_type='mlp', num_workers=0, patience=5, pct_start=0.3, pred_len=12, random_seed=2021, root_path='./dataset/', seq_len=576, target='HR', test_flop=False, train_epochs=30, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : Wearable_576_12_FTQNet_Wearable_ftM_sl576_pl12_cycle4_fa0.9_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+Wearable train: 13075 windows, 16 eligible subjects, 19 channels (MixBench implementation).
+Wearable val: 2642 windows, 4 eligible subjects, 19 channels (MixBench implementation).
+Epoch 1 train=0.72771816 val=0.79776029
+Epoch 2 train=0.73368776 val=0.79336012
+Epoch 3 train=0.69699481 val=0.76687793
+Epoch 4 train=0.68405698 val=0.77049092
+Epoch 5 train=0.67675822 val=0.76872426
+Epoch 6 train=0.66804485 val=0.77067095
+Epoch 7 train=0.66434109 val=0.77489828
+Epoch 8 train=0.66175456 val=0.77463391
+Early stopping at epoch 8 (best epoch 3)
+Training complete: epochs=8 best_epoch=3 best_val=0.76687793
+>>>>>>>testing : Wearable_576_12_FTQNet_Wearable_ftM_sl576_pl12_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Wearable test: 1523 windows, 4 eligible subjects, 19 channels (MixBench implementation).
+mse:0.6424067086149893, mae:0.5722003798833468
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=4, d_model=64, data='Wearable', data_path='wearable.csv', des='test', devices='0,1', dropout=0.242352, embed='timeF', enc_in=19, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='5min', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.009135185, loss='mse', lradj='type1', model='FTQNet', model_id='Wearable_576_48', model_type='mlp', num_workers=0, patience=5, pct_start=0.3, pred_len=48, random_seed=2021, root_path='./dataset/', seq_len=576, target='HR', test_flop=False, train_epochs=30, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : Wearable_576_48_FTQNet_Wearable_ftM_sl576_pl48_cycle4_fa0.9_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+Wearable train: 12499 windows, 16 eligible subjects, 19 channels (MixBench implementation).
+Wearable val: 2514 windows, 2 eligible subjects, 19 channels (MixBench implementation).
+Epoch 1 train=0.74205605 val=0.82474798
+Epoch 2 train=0.75154557 val=0.84902122
+Epoch 3 train=0.72732954 val=0.81473658
+Epoch 4 train=0.71527883 val=0.81504715
+Epoch 5 train=0.70924821 val=0.81982522
+Epoch 6 train=0.70404106 val=0.82373279
+Epoch 7 train=0.70059160 val=0.82727284
+Epoch 8 train=0.69902577 val=0.82661085
+Early stopping at epoch 8 (best epoch 3)
+Training complete: epochs=8 best_epoch=3 best_val=0.81473658
+>>>>>>>testing : Wearable_576_48_FTQNet_Wearable_ftM_sl576_pl48_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Wearable test: 1379 windows, 4 eligible subjects, 19 channels (MixBench implementation).
+mse:0.6691311577147864, mae:0.5898502387115329
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=4, d_model=64, data='Wearable', data_path='wearable.csv', des='test', devices='0,1', dropout=0.242352, embed='timeF', enc_in=19, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='5min', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.009135185, loss='mse', lradj='type1', model='FTQNet', model_id='Wearable_576_144', model_type='mlp', num_workers=0, patience=5, pct_start=0.3, pred_len=144, random_seed=2021, root_path='./dataset/', seq_len=576, target='HR', test_flop=False, train_epochs=30, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : Wearable_576_144_FTQNet_Wearable_ftM_sl576_pl144_cycle4_fa0.9_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+Wearable train: 11098 windows, 14 eligible subjects, 19 channels (MixBench implementation).
+Wearable val: 2322 windows, 2 eligible subjects, 19 channels (MixBench implementation).
+Epoch 1 train=0.74601287 val=0.85714503
+Epoch 2 train=0.75934613 val=0.88484631
+Epoch 3 train=0.74071518 val=0.84715395
+Epoch 4 train=0.72947886 val=0.84878200
+Epoch 5 train=0.72562414 val=0.85081162
+Epoch 6 train=0.72220818 val=0.85345782
+Epoch 7 train=0.71996183 val=0.85402323
+Epoch 8 train=0.71882599 val=0.85485104
+Early stopping at epoch 8 (best epoch 3)
+Training complete: epochs=8 best_epoch=3 best_val=0.84715395
+>>>>>>>testing : Wearable_576_144_FTQNet_Wearable_ftM_sl576_pl144_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Wearable test: 1114 windows, 2 eligible subjects, 19 channels (MixBench implementation).
+mse:0.6761695254815829, mae:0.5945958863365597
+Args in experiment:
+Namespace(batch_size=128, checkpoints='./checkpoints/', covid_calibrated=False, cycle=4, d_model=64, data='Wearable', data_path='wearable.csv', des='test', devices='0,1', dropout=0.242352, embed='timeF', enc_in=19, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='5min', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.009135185, loss='mse', lradj='type1', model='FTQNet', model_id='Wearable_576_288', model_type='mlp', num_workers=0, patience=5, pct_start=0.3, pred_len=288, random_seed=2021, root_path='./dataset/', seq_len=576, target='HR', test_flop=False, train_epochs=30, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use device: cuda:0
+>>>>>>>start training : Wearable_576_288_FTQNet_Wearable_ftM_sl576_pl288_cycle4_fa0.9_fc1.0_fg8_seed2021>>>>>>>>>>>>>>>>>>>>>>>>>>
+Wearable train: 9206 windows, 12 eligible subjects, 19 channels (MixBench implementation).
+Wearable val: 2034 windows, 2 eligible subjects, 19 channels (MixBench implementation).
+Epoch 1 train=0.75146296 val=0.88039888
+Epoch 2 train=0.75027750 val=0.89272898
+Epoch 3 train=0.74287866 val=0.87495957
+Epoch 4 train=0.73412558 val=0.87927200
+Epoch 5 train=0.72933195 val=0.88549564
+Epoch 6 train=0.72598962 val=0.88337193
+Epoch 7 train=0.72401235 val=0.88713944
+Epoch 8 train=0.72294197 val=0.88853090
+Early stopping at epoch 8 (best epoch 3)
+Training complete: epochs=8 best_epoch=3 best_val=0.87495957
+>>>>>>>testing : Wearable_576_288_FTQNet_Wearable_ftM_sl576_pl288_cycle4_fa0.9_fc1.0_fg8_seed2021<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Wearable test: 826 windows, 2 eligible subjects, 19 channels (MixBench implementation).
+mse:0.6803468323089441, mae:0.6008496481190873

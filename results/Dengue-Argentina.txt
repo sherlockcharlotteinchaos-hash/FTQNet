@@ -1,0 +1,174 @@
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Dengue-Argentina', data_path='Dengue Argentina.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=23, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.005, loss='mae', lradj='constant', model='FTQNet', model_id='Dengue-Argentina_24_4_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=4, random_seed=42, root_path='./dataset/', seq_len=24, target='dengue_total', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use GPU: cuda:0
+Dengue-Argentina | train | shape=(92, 23) | windows=37 | training_prefix=64 | fixed_test_origin=88 (2021-05-30) | training_output_H=4 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+>>>>>>>start training : Dengue-Argentina_24_4_fixed_FTQNet_Dengue-Argentina_ftM_sl24_pl4_cycle52_fa0.9_fc1.0_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Dengue-Argentina | val | shape=(92, 23) | windows=21 | training_prefix=64 | fixed_test_origin=88 (2021-05-30) | training_output_H=4 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/selection epoch=1/40 train_MASE=2.596204 validation_MASE=0.341310 best=0.341310
+history/selection epoch=2/40 train_MASE=2.507966 validation_MASE=0.341147 best=0.341147
+history/selection epoch=3/40 train_MASE=2.418606 validation_MASE=0.338514 best=0.338514
+history/selection epoch=4/40 train_MASE=2.304334 validation_MASE=0.338802 best=0.338514
+history/selection epoch=5/40 train_MASE=2.161279 validation_MASE=0.336517 best=0.336517
+history/selection epoch=6/40 train_MASE=2.058272 validation_MASE=0.334534 best=0.334534
+history/selection epoch=7/40 train_MASE=2.017249 validation_MASE=0.333996 best=0.333996
+history/selection epoch=8/40 train_MASE=1.940995 validation_MASE=0.335763 best=0.333996
+history/selection epoch=9/40 train_MASE=1.924662 validation_MASE=0.335622 best=0.333996
+history/selection epoch=10/40 train_MASE=1.889169 validation_MASE=0.335814 best=0.333996
+history/selection epoch=11/40 train_MASE=1.875686 validation_MASE=0.338986 best=0.333996
+history/selection epoch=12/40 train_MASE=1.825766 validation_MASE=0.343336 best=0.333996
+history/selection epoch=13/40 train_MASE=1.783766 validation_MASE=0.349993 best=0.333996
+history/selection epoch=14/40 train_MASE=1.734402 validation_MASE=0.360830 best=0.333996
+history/selection epoch=15/40 train_MASE=1.808375 validation_MASE=0.365375 best=0.333996
+history/selection epoch=16/40 train_MASE=1.700421 validation_MASE=0.353984 best=0.333996
+history/selection epoch=17/40 train_MASE=1.715626 validation_MASE=0.361608 best=0.333996
+recent/selection epoch=1/10 train_MASE=0.187703 validation_MASE=0.334952 best=0.334952
+recent/selection epoch=2/10 train_MASE=0.155227 validation_MASE=0.335743 best=0.334952
+recent/selection epoch=3/10 train_MASE=0.141561 validation_MASE=0.336746 best=0.334952
+recent/selection epoch=4/10 train_MASE=0.125680 validation_MASE=0.337387 best=0.334952
+recent/selection epoch=5/10 train_MASE=0.121437 validation_MASE=0.337684 best=0.334952
+recent/selection epoch=6/10 train_MASE=0.114793 validation_MASE=0.338252 best=0.334952
+recent/selection epoch=7/10 train_MASE=0.107903 validation_MASE=0.338927 best=0.334952
+recent/selection epoch=8/10 train_MASE=0.108528 validation_MASE=0.339396 best=0.334952
+recent/selection epoch=9/10 train_MASE=0.100713 validation_MASE=0.339805 best=0.334952
+recent/selection epoch=10/10 train_MASE=0.099007 validation_MASE=0.340232 best=0.334952
+Dengue-Argentina | train/refit | shape=(92, 23) | windows=61 | training_prefix=88 | fixed_test_origin=88 (2021-05-30) | training_output_H=4 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/refit epoch=1/7 train_MASE=2.237869
+history/refit epoch=2/7 train_MASE=2.172940
+history/refit epoch=3/7 train_MASE=2.086337
+history/refit epoch=4/7 train_MASE=2.024072
+history/refit epoch=5/7 train_MASE=1.843846
+history/refit epoch=6/7 train_MASE=1.786652
+history/refit epoch=7/7 train_MASE=1.744032
+Frozen selection={'history_epochs': 7, 'recent_epochs': 0, 'validation_mase': 0.33399564448734415} | mode=global_trend | train_end=88 | seconds=6.6
+>>>>>>>testing : Dengue-Argentina_24_4_fixed_FTQNet_Dengue-Argentina_ftM_sl24_pl4_cycle52_fa0.9_fc1.0_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Dengue-Argentina | test/refit | shape=(92, 23) | windows=1 | training_prefix=88 | fixed_test_origin=88 (2021-05-30) | training_output_H=4 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2021-05-30 | windows=1 | H=4 | reported_targets=17/92 | selection={'history_epochs': 7, 'recent_epochs': 0, 'validation_mase': 0.33399564448734415}
+EpiCast raw metrics | MAE:0.9922181870, RMSE:1.0799797618, SMAPE:28.1085965214, MASE:0.1243999944
+mse:0.007833803402817596, mae:0.029520885208329715
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Dengue-Argentina', data_path='Dengue Argentina.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=23, features='M', flinear_alpha=0.9, flinear_c=1.0, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.005, loss='mae', lradj='constant', model='FTQNet', model_id='Dengue-Argentina_24_8_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=8, random_seed=42, root_path='./dataset/', seq_len=24, target='dengue_total', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 1.0, groups: 8
+Use GPU: cuda:0
+Dengue-Argentina | train | shape=(92, 23) | windows=37 | training_prefix=68 | fixed_test_origin=84 (2021-05-02) | training_output_H=8 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+>>>>>>>start training : Dengue-Argentina_24_8_fixed_FTQNet_Dengue-Argentina_ftM_sl24_pl8_cycle52_fa0.9_fc1.0_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Dengue-Argentina | val | shape=(92, 23) | windows=9 | training_prefix=68 | fixed_test_origin=84 (2021-05-02) | training_output_H=8 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/selection epoch=1/40 train_MASE=3.450941 validation_MASE=0.574497 best=0.574497
+history/selection epoch=2/40 train_MASE=3.315741 validation_MASE=0.572781 best=0.572781
+history/selection epoch=3/40 train_MASE=3.237598 validation_MASE=0.570236 best=0.570236
+history/selection epoch=4/40 train_MASE=3.196918 validation_MASE=0.568197 best=0.568197
+history/selection epoch=5/40 train_MASE=3.140976 validation_MASE=0.562795 best=0.562795
+history/selection epoch=6/40 train_MASE=3.042777 validation_MASE=0.561812 best=0.561812
+history/selection epoch=7/40 train_MASE=2.890220 validation_MASE=0.557796 best=0.557796
+history/selection epoch=8/40 train_MASE=2.740078 validation_MASE=0.553004 best=0.553004
+history/selection epoch=9/40 train_MASE=2.474455 validation_MASE=0.551886 best=0.551886
+history/selection epoch=10/40 train_MASE=2.259618 validation_MASE=0.548036 best=0.548036
+history/selection epoch=11/40 train_MASE=2.172030 validation_MASE=0.546912 best=0.546912
+history/selection epoch=12/40 train_MASE=2.090351 validation_MASE=0.545194 best=0.545194
+history/selection epoch=13/40 train_MASE=2.043827 validation_MASE=0.544420 best=0.544420
+history/selection epoch=14/40 train_MASE=2.012334 validation_MASE=0.550292 best=0.544420
+history/selection epoch=15/40 train_MASE=1.943764 validation_MASE=0.537984 best=0.537984
+history/selection epoch=16/40 train_MASE=1.912194 validation_MASE=0.542323 best=0.537984
+history/selection epoch=17/40 train_MASE=1.869140 validation_MASE=0.554607 best=0.537984
+history/selection epoch=18/40 train_MASE=1.826365 validation_MASE=0.546095 best=0.537984
+history/selection epoch=19/40 train_MASE=1.726534 validation_MASE=0.544022 best=0.537984
+history/selection epoch=20/40 train_MASE=1.753556 validation_MASE=0.546813 best=0.537984
+history/selection epoch=21/40 train_MASE=1.728341 validation_MASE=0.539053 best=0.537984
+history/selection epoch=22/40 train_MASE=1.687282 validation_MASE=0.552979 best=0.537984
+history/selection epoch=23/40 train_MASE=1.751226 validation_MASE=0.538564 best=0.537984
+history/selection epoch=24/40 train_MASE=1.743179 validation_MASE=0.557878 best=0.537984
+history/selection epoch=25/40 train_MASE=1.903148 validation_MASE=0.551029 best=0.537984
+recent/selection epoch=1/10 train_MASE=0.155462 validation_MASE=0.540262 best=0.540262
+recent/selection epoch=2/10 train_MASE=0.140598 validation_MASE=0.542272 best=0.540262
+recent/selection epoch=3/10 train_MASE=0.120292 validation_MASE=0.544686 best=0.540262
+recent/selection epoch=4/10 train_MASE=0.109163 validation_MASE=0.547094 best=0.540262
+recent/selection epoch=5/10 train_MASE=0.106038 validation_MASE=0.549173 best=0.540262
+recent/selection epoch=6/10 train_MASE=0.093283 validation_MASE=0.550893 best=0.540262
+recent/selection epoch=7/10 train_MASE=0.092768 validation_MASE=0.552267 best=0.540262
+recent/selection epoch=8/10 train_MASE=0.085573 validation_MASE=0.553419 best=0.540262
+recent/selection epoch=9/10 train_MASE=0.083212 validation_MASE=0.554506 best=0.540262
+recent/selection epoch=10/10 train_MASE=0.074456 validation_MASE=0.555625 best=0.540262
+Dengue-Argentina | train/refit | shape=(92, 23) | windows=53 | training_prefix=84 | fixed_test_origin=84 (2021-05-02) | training_output_H=8 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/refit epoch=1/15 train_MASE=2.964727
+history/refit epoch=2/15 train_MASE=2.939329
+history/refit epoch=3/15 train_MASE=2.843340
+history/refit epoch=4/15 train_MASE=2.804375
+history/refit epoch=5/15 train_MASE=2.738203
+history/refit epoch=6/15 train_MASE=2.628082
+history/refit epoch=7/15 train_MASE=2.431797
+history/refit epoch=8/15 train_MASE=2.341497
+history/refit epoch=9/15 train_MASE=2.054263
+history/refit epoch=10/15 train_MASE=1.883654
+history/refit epoch=11/15 train_MASE=1.758542
+history/refit epoch=12/15 train_MASE=1.707008
+history/refit epoch=13/15 train_MASE=1.659854
+history/refit epoch=14/15 train_MASE=1.621797
+history/refit epoch=15/15 train_MASE=1.595241
+Frozen selection={'history_epochs': 15, 'recent_epochs': 0, 'validation_mase': 0.5379844917963961} | mode=log_relative | train_end=84 | seconds=9.4
+>>>>>>>testing : Dengue-Argentina_24_8_fixed_FTQNet_Dengue-Argentina_ftM_sl24_pl8_cycle52_fa0.9_fc1.0_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Dengue-Argentina | test/refit | shape=(92, 23) | windows=1 | training_prefix=84 | fixed_test_origin=84 (2021-05-02) | training_output_H=8 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2021-05-02 | windows=1 | H=8 | reported_targets=41/184 | selection={'history_epochs': 15, 'recent_epochs': 0, 'validation_mase': 0.5379844917963961}
+EpiCast raw metrics | MAE:4.5978355213, RMSE:5.1534342329, SMAPE:38.3227849868, MASE:0.4711173727
+mse:0.04738148784294583, mae:0.08820842572160519
+Args in experiment:
+Namespace(batch_size=8, checkpoints='./checkpoints/', covid_calibrated=False, cycle=52, d_model=64, data='Dengue-Argentina', data_path='Dengue Argentina.csv', des='fixed', devices='0', dropout=0.1, embed='timeF', enc_in=23, features='M', flinear_alpha=0.9, flinear_c=0.01, flinear_groups=8, freq='w', gpu=0, health_deterministic=1, health_strict_schema=1, health_train_drop_last=1, is_training=1, itr=1, label_len=0, learning_rate=0.01, loss='mae', lradj='constant', model='FTQNet', model_id='Dengue-Argentina_24_12_fixed', model_type='mlp', num_workers=0, patience=10, pct_start=0.3, pred_len=12, random_seed=42, root_path='./dataset/', seq_len=24, target='dengue_total', test_flop=False, train_epochs=50, use_amp=False, use_gpu=True, use_multi_gpu=False, use_revin=1)
+FLinear config | alpha: 0.9, c: 0.01, groups: 8
+Use GPU: cuda:0
+Dengue-Argentina | train | shape=(92, 23) | windows=21 | training_prefix=56 | fixed_test_origin=80 (2021-04-04) | training_output_H=12 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+>>>>>>>start training : Dengue-Argentina_24_12_fixed_FTQNet_Dengue-Argentina_ftM_sl24_pl12_cycle52_fa0.9_fc0.01_fg8_seed42>>>>>>>>>>>>>>>>>>>>>>>>>>
+Dengue-Argentina | val | shape=(92, 23) | windows=13 | training_prefix=56 | fixed_test_origin=80 (2021-04-04) | training_output_H=12 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/selection epoch=1/40 train_MASE=4.449092 validation_MASE=0.127888 best=0.127888
+history/selection epoch=2/40 train_MASE=4.231065 validation_MASE=0.119885 best=0.119885
+history/selection epoch=3/40 train_MASE=4.196463 validation_MASE=0.120101 best=0.119885
+history/selection epoch=4/40 train_MASE=4.066365 validation_MASE=0.120041 best=0.119885
+history/selection epoch=5/40 train_MASE=4.051430 validation_MASE=0.122437 best=0.119885
+history/selection epoch=6/40 train_MASE=4.014262 validation_MASE=0.117436 best=0.117436
+history/selection epoch=7/40 train_MASE=4.011366 validation_MASE=0.117309 best=0.117309
+history/selection epoch=8/40 train_MASE=3.984297 validation_MASE=0.117790 best=0.117309
+history/selection epoch=9/40 train_MASE=3.961778 validation_MASE=0.118639 best=0.117309
+history/selection epoch=10/40 train_MASE=3.960603 validation_MASE=0.117364 best=0.117309
+history/selection epoch=11/40 train_MASE=3.949072 validation_MASE=0.116031 best=0.116031
+history/selection epoch=12/40 train_MASE=3.928900 validation_MASE=0.116114 best=0.116031
+history/selection epoch=13/40 train_MASE=3.916058 validation_MASE=0.117146 best=0.116031
+history/selection epoch=14/40 train_MASE=3.870131 validation_MASE=0.117530 best=0.116031
+history/selection epoch=15/40 train_MASE=3.827311 validation_MASE=0.124217 best=0.116031
+history/selection epoch=16/40 train_MASE=3.730889 validation_MASE=0.128861 best=0.116031
+history/selection epoch=17/40 train_MASE=3.509273 validation_MASE=0.134923 best=0.116031
+history/selection epoch=18/40 train_MASE=3.368658 validation_MASE=0.123664 best=0.116031
+history/selection epoch=19/40 train_MASE=3.235428 validation_MASE=0.124958 best=0.116031
+history/selection epoch=20/40 train_MASE=3.129883 validation_MASE=0.123022 best=0.116031
+history/selection epoch=21/40 train_MASE=2.976608 validation_MASE=0.121242 best=0.116031
+recent/selection epoch=1/10 train_MASE=2.732950 validation_MASE=0.117852 best=0.117852
+recent/selection epoch=2/10 train_MASE=2.732457 validation_MASE=0.118223 best=0.117852
+recent/selection epoch=3/10 train_MASE=2.722300 validation_MASE=0.117965 best=0.117852
+recent/selection epoch=4/10 train_MASE=2.701828 validation_MASE=0.116432 best=0.116432
+recent/selection epoch=5/10 train_MASE=2.694167 validation_MASE=0.115910 best=0.115910
+recent/selection epoch=6/10 train_MASE=2.664429 validation_MASE=0.115361 best=0.115361
+recent/selection epoch=7/10 train_MASE=2.652022 validation_MASE=0.115429 best=0.115361
+recent/selection epoch=8/10 train_MASE=2.646772 validation_MASE=0.116329 best=0.115361
+recent/selection epoch=9/10 train_MASE=2.628942 validation_MASE=0.117784 best=0.115361
+recent/selection epoch=10/10 train_MASE=2.596309 validation_MASE=0.119241 best=0.115361
+Dengue-Argentina | train/refit | shape=(92, 23) | windows=45 | training_prefix=80 | fixed_test_origin=80 (2021-04-04) | training_output_H=12 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+history/refit epoch=1/11 train_MASE=2.989660
+history/refit epoch=2/11 train_MASE=2.794771
+history/refit epoch=3/11 train_MASE=2.729035
+history/refit epoch=4/11 train_MASE=2.676288
+history/refit epoch=5/11 train_MASE=2.652843
+history/refit epoch=6/11 train_MASE=2.652794
+history/refit epoch=7/11 train_MASE=2.640368
+history/refit epoch=8/11 train_MASE=2.638148
+history/refit epoch=9/11 train_MASE=2.631701
+history/refit epoch=10/11 train_MASE=2.618098
+history/refit epoch=11/11 train_MASE=2.592991
+recent/refit epoch=1/6 train_MASE=0.116679
+recent/refit epoch=2/6 train_MASE=0.121615
+recent/refit epoch=3/6 train_MASE=0.117735
+recent/refit epoch=4/6 train_MASE=0.111828
+recent/refit epoch=5/6 train_MASE=0.111010
+recent/refit epoch=6/6 train_MASE=0.109427
+Frozen selection={'history_epochs': 11, 'recent_epochs': 6, 'validation_mase': 0.1153610744921999} | mode=global_last | train_end=80 | seconds=7.0
+>>>>>>>testing : Dengue-Argentina_24_12_fixed_FTQNet_Dengue-Argentina_ftM_sl24_pl12_cycle52_fa0.9_fc0.01_fg8_seed42<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Dengue-Argentina | test/refit | shape=(92, 23) | windows=1 | training_prefix=80 | fixed_test_origin=80 (2021-04-04) | training_output_H=12 | leading_gap_initializations=420 | raw PAHO Admin2-to-province reconstruction; national/annual records excluded; incomplete municipal reporting is not proven complete surveillance
+PROTOCOL=epicast-single-tail-origin-v7-regional | origin=2021-04-04 | windows=1 | H=12 | reported_targets=81/276 | selection={'history_epochs': 11, 'recent_epochs': 6, 'validation_mase': 0.1153610744921999}
+EpiCast raw metrics | MAE:5.9311316046, RMSE:6.9522836030, SMAPE:36.4457356270, MASE:0.7117762017
+mse:0.13294364781676715, mae:0.1337719127289745
