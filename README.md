@@ -139,7 +139,7 @@ The scripts read `dataset/<filename>` with no nested `ETT-small/`, `traffic/`, o
 |---|---|---|---|
 | `ILI` | `ILI.csv` | 966 timestamps × 7 channels | [THUML illness benchmark CSV](https://huggingface.co/datasets/thuml/Time-Series-Library/blob/main/illness/national_illness.csv); original influenza surveillance: [CDC FluView](https://www.cdc.gov/fluview/overview/fluview-interactive.html) |
 | `Covid-19` | `Covid-19.csv` | 1392 timestamps × 948 channels | **Use the packaged CSV for exact experiments.** For underlying public COVID-19 records, consult [Johns Hopkins CSSE COVID-19](https://github.com/CSSEGISandData/COVID-19) or [Google COVID-19 Open Data](https://github.com/GoogleCloudPlatform/covid-19-open-data); these are *not verified drop-in replacements* for this 948-channel benchmark. |
-| `Wearable` | `wearable.csv` | 38,913 raw records; loader selects 19 modeling channels | [Original wearable-HRV dataset on Springer Nature / Figshare](https://springernature.figshare.com/articles/dataset/In-situ_wearable-based_dataset_of_continuous_heart_rate_variability_monitoring_accompanied_by_sleep_diaries/28509740) |
+| `Wearable` | `wearable.csv` | 38,913 raw records; loader selects 24 modeling channels | [Original wearable-HRV dataset on Springer Nature / Figshare](https://springernature.figshare.com/articles/dataset/In-situ_wearable-based_dataset_of_continuous_heart_rate_variability_monitoring_accompanied_by_sleep_diaries/28509740) |
 
 **Important format notes:**
 
